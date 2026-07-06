@@ -48,7 +48,8 @@ jobs:
       - name: OpenAPI drift check (code-first, committed spec is the contract)
         run: |
           php bin/console nelmio:apidoc:dump --format=json --no-pretty > /tmp/openapi.generated.json
-          if ! diff -u openapi.json /tmp/openapi.generated.json; then
+          # canonicalize both sides (jq -S) so only semantic drift fails, not byte formatting
+          if ! diff -u <(jq -S . openapi.json) <(jq -S . /tmp/openapi.generated.json); then
             echo '::error::openapi.json drifted from the controllers. Regenerate it with: composer openapi:dump'
             echo '--- BEGIN GENERATED SPEC (copy to backend/openapi.json) ---'
             cat /tmp/openapi.generated.json
