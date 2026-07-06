@@ -85,10 +85,10 @@ final class TenantIsolationTest extends KernelTestCase
         $this->context()->clear();
 
         $person = new Person('Testy', 'McTest', 'testy@example.test');
-        $this->dm()->persist($person);
 
+        // The guard fires at persist() time (ODM prePersist is synchronous).
         $this->expectException(MissingTenantContextException::class);
-        $this->dm()->flush();
+        $this->dm()->persist($person);
     }
 
     public function testExplicitSuperAdminScopeSeesAllTenants(): void
