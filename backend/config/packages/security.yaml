@@ -1,0 +1,20 @@
+security:
+    # No local password storage — interviewees authenticate with magic links,
+    # Studio admins and technical accounts with studizz-auth JWTs.
+    providers:
+        noop:
+            memory: { users: [] }
+
+    firewalls:
+        api:
+            pattern: ^/api
+            stateless: true
+            provider: noop
+            custom_authenticators:
+                - App\Module\Security\MagicLink\MagicLinkAuthenticator
+                - App\Module\Security\StudizzAuth\StudizzJwtAuthenticator
+
+    access_control:
+        - { path: ^/api/v1/health, roles: PUBLIC_ACCESS }
+        # Everything else stays open until the first real endpoints land (J2+);
+        # each new route declares its access rule in the same PR.

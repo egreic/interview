@@ -1,0 +1,46 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    _instanceof:
+        App\Module\Platform\Seed\ModuleSeederInterface:
+            tags: ['app.module_seeder']
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/Kernel.php'
+            - '../src/Module/*/Document/'
+            - '../src/Module/*/Dto/'
+            - '../src/Module/*/Exception/'
+
+    App\Module\Tenancy\Listener\TenantStampSubscriber:
+        tags:
+            - { name: 'doctrine_mongodb.odm.event_subscriber' }
+
+    App\Module\Platform\Seed\DemoSeeder:
+        arguments:
+            $seeders: !tagged_iterator app.module_seeder
+
+    # Adapter defaults: stubs everywhere in dev/test; prod swaps HTTP clients in.
+    App\Module\Security\StudizzAuth\StudizzAuthClientInterface: '@App\Module\Security\StudizzAuth\StubStudizzAuthClient'
+    App\Module\Platform\Adapter\Job\JobDispatcherInterface: '@App\Module\Platform\Adapter\Job\StubJobDispatcher'
+    App\Module\Platform\Adapter\Llm\LlmClientInterface: '@App\Module\Platform\Adapter\Llm\StubLlmClient'
+    App\Module\Notification\Adapter\MailerClientInterface: '@App\Module\Notification\Adapter\StubMailerClient'
+    App\Module\ProfileEnrichment\Adapter\LinkedInClientInterface: '@App\Module\ProfileEnrichment\Adapter\StubLinkedInClient'
+    App\Module\SchoolContext\Adapter\SchoolContextProviderInterface: '@App\Module\SchoolContext\Adapter\StubSchoolContextProvider'
+    App\Module\CanonicalRecord\Adapter\AudioStorageInterface: '@App\Module\CanonicalRecord\Adapter\StubAudioStorage'
+    App\Module\Voice\Adapter\SttClientInterface: '@App\Module\Voice\Adapter\StubSttClient'
+    App\Module\Voice\Adapter\TtsClientInterface: '@App\Module\Voice\Adapter\StubTtsClient'
+
+when@prod:
+    services:
+        _defaults:
+            autowire: true
+            autoconfigure: true
+        App\Module\Security\StudizzAuth\StudizzAuthClientInterface: '@App\Module\Security\StudizzAuth\HttpStudizzAuthClient'
+        App\Module\Platform\Adapter\Job\JobDispatcherInterface: '@App\Module\Platform\Adapter\Job\AmqpGatewayJobDispatcher'
+        App\Module\Notification\Adapter\MailerClientInterface: '@App\Module\Notification\Adapter\HttpMailerClient'

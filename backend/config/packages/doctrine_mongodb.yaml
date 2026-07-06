@@ -1,0 +1,22 @@
+doctrine_mongodb:
+    auto_generate_proxy_classes: true
+    auto_generate_hydrator_classes: true
+    connections:
+        default:
+            server: '%env(resolve:MONGODB_URL)%'
+    default_database: '%env(resolve:MONGODB_DB)%'
+    document_managers:
+        default:
+            auto_mapping: false
+            filters:
+                # Tenant guard — enabled for every request; the filter matches
+                # nothing until TenantContext sets a tenant (safe by default).
+                tenant:
+                    class: App\Module\Tenancy\OdmFilter\TenantFilter
+                    enabled: true
+            mappings:
+                AppModules:
+                    is_bundle: false
+                    type: attribute
+                    dir: '%kernel.project_dir%/src/Module'
+                    prefix: 'App\Module'

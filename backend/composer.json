@@ -8,14 +8,15 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "doctrine/mongodb-odm-bundle": "^5.0",
+        "mongodb/mongodb": "^2.0",
         "nelmio/api-doc-bundle": "^4.28",
+        "nelmio/cors-bundle": "^2.4",
         "symfony/console": "6.4.*",
         "symfony/dotenv": "6.4.*",
         "symfony/framework-bundle": "6.4.*",
         "symfony/http-client": "6.4.*",
         "symfony/property-access": "6.4.*",
         "symfony/property-info": "6.4.*",
-        "symfony/runtime": "6.4.*",
         "symfony/security-bundle": "6.4.*",
         "symfony/serializer": "6.4.*",
         "symfony/validator": "6.4.*",
@@ -26,9 +27,7 @@
         "phpunit/phpunit": "^10.5"
     },
     "config": {
-        "allow-plugins": {
-            "symfony/runtime": true
-        },
+        "allow-plugins": false,
         "platform": {
             "php": "8.3.30"
         },

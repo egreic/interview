@@ -1,0 +1,9 @@
+nelmio_api_doc:
+    documentation:
+        info:
+            title: 'Interview & Avatars API'
+            description: 'API of the Interview & Avatars brick — OpenAPI is code-first: annotations live in the controllers, the committed openapi.json is dumped from them (CI fails on drift).'
+            version: 0.1.0
+    areas:
+        path_patterns:
+            - ^/api
