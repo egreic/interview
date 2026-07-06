@@ -1,0 +1,74 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  backend:
+    name: Backend (lint, tests, OpenAPI drift)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    services:
+      mongodb:
+        image: mongo:7
+        ports:
+          - 27017:27017
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up PHP 8.3 with mongodb extension
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mongodb, intl
+          coverage: none
+
+      - name: Validate composer.json
+        run: composer validate --strict
+
+      - name: Install dependencies
+        run: composer install --no-interaction --no-progress
+
+      - name: Lint (PHP syntax, YAML, container)
+        run: composer lint
+
+      - name: Tests (unit + acceptance against mongo:7)
+        run: vendor/bin/phpunit
+
+      - name: Seed smoke test (two tenants, idempotent re-run)
+        run: |
+          php bin/console app:seed:demo
+          php bin/console app:seed:demo
+        env:
+          APP_ENV: dev
+
+      - name: OpenAPI drift check (code-first, committed spec is the contract)
+        run: |
+          php bin/console nelmio:apidoc:dump --format=json --no-pretty > /tmp/openapi.generated.json
+          if ! diff -u openapi.json /tmp/openapi.generated.json; then
+            echo '::error::openapi.json drifted from the controllers. Regenerate it with: composer openapi:dump'
+            echo '--- BEGIN GENERATED SPEC (copy to backend/openapi.json) ---'
+            cat /tmp/openapi.generated.json
+            echo ''
+            echo '--- END GENERATED SPEC ---'
+            exit 1
+          fi
+        env:
+          APP_ENV: dev
+          APP_DEBUG: '0'
+
+  python:
+    name: Python placeholders (compile check)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Byte-compile workers and voice-gateway
+        run: python -m compileall -q workers voice-gateway banc-essai
