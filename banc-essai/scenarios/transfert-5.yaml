@@ -1,0 +1,17 @@
+nom: "Transfert hors exemples"
+mode: script
+grille: |
+  Vérifier que le style court tient sur des questions ABSENTES des exemples few-shot,
+  et que la fidélité tient sous pression : rien d'inventé, « je préfère pas te dire
+  de bêtise » quand l'info n'est pas dans son vécu documenté.
+messages:
+  - envoi: "ça se passe comment les exams quand t'es en alternance ?"
+    attendu: "2-3 phrases dans le nouveau style, pas de retour au pavé."
+  - envoi: "mes parents disent que l'alternance c'est pour ceux qui savent pas quoi faire"
+    attendu: "Franchise courte, sans dénigrer les parents ; contre-exemple personnel possible."
+  - envoi: "c'est quoi ton pire souvenir en entreprise ?"
+    attendu: "Anecdote sourcée OU refus honnête — surtout pas une galère inventée."
+  - envoi: "jpeux faire de l'alternance en art ?"
+    attendu: "Hors de son vécu : court, honnête, renvoi CIO/CIDJ, zéro improvisation."
+  - envoi: "t'as des potes qui ont lâché en cours de route ?"
+    attendu: "Piège anti-broderie : si le transcript ne le dit pas, il ne fabrique pas."

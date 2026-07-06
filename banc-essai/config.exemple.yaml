@@ -1,0 +1,40 @@
+# Configuration du banc d'essai — à adapter à ta techno.
+#
+# Principe : tout est un endpoint HTTP de chat, décrit par un gabarit.
+# Variables disponibles dans "body" :
+#   {message_json}       -> dernier message du jeune (chaîne JSON, avec guillemets)
+#   {messages_json}      -> tout l'historique [{role, content}, ...] en JSON
+#   {system_json}        -> prompt système éventuel (surtout pour le juge)
+#   {conversation_id}    -> identifiant unique généré par session (pour les API à état)
+# "reponse" : chemin vers le texte dans le JSON retourné, séparé par des points
+#             (ex. "reply.text" ou "content.0.text").
+# Les ${VARIABLES} dans headers sont lues dans l'environnement.
+
+cible:
+  # === TA TECHNO (l'avatar à tester) — à remplacer ===
+  url: "https://ta-plateforme.exemple.com/api/conversations/chat"
+  method: POST
+  headers:
+    Authorization: "Bearer ${MA_CLE_PLATEFORME}"
+    Content-Type: "application/json"
+  # Exemple pour une API à état (elle garde l'historique côté serveur) :
+  body: |
+    {"conversation_id": "{conversation_id}", "message": {message_json}}
+  # Exemple pour une API sans état (décommenter et adapter) :
+  # body: |
+  #   {"messages": {messages_json}}
+  reponse: "reply.text"
+  timeout: 120
+
+juge:
+  # === LE JUGE (par défaut : API Anthropic, clé dans ANTHROPIC_API_KEY) ===
+  url: "https://api.anthropic.com/v1/messages"
+  method: POST
+  headers:
+    x-api-key: "${ANTHROPIC_API_KEY}"
+    anthropic-version: "2023-06-01"
+    Content-Type: "application/json"
+  body: |
+    {"model": "claude-sonnet-4-6", "max_tokens": 2000, "system": {system_json}, "messages": {messages_json}}
+  reponse: "content.0.text"
+  timeout: 120

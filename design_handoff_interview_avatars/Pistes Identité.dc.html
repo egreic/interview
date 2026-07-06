@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body { margin: 0; background: #E9E7E2; }
+</style>
+</helmet>
+<section style="padding: 48px; display: flex; flex-direction: column; gap: 28px; border-bottom: 1px dashed #C8C5BE;">
+  <div id="3a" style="display: flex; align-items: baseline; gap: 16px;">
+    <a href="#3a" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #0E7C66; color: #FFFFFF; padding: 4px 10px; border-radius: 999px; text-decoration: none;">3a</a>
+    <div style="font-family: 'Figtree', sans-serif; font-weight: 800; font-size: 30px; color: #17181A; letter-spacing: -0.02em;">Flux A — de l'email d'invitation à l'avatar</div>
+    <div style="font-family: 'Figtree', sans-serif; font-size: 14px; color: #8A8B8E;">Piste « Clair » · mobile-first · thème ESM Lyon · 12 étapes, embranchements en légende</div>
+  </div>
+  <div style="display: flex; gap: 28px; flex-wrap: wrap; align-items: flex-start;">
+    <div style="display: flex; flex-direction: column; gap: 8px; width: 375px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">00 · EMAIL D'INVITATION</div>
+  <div data-screen-label="3a Email" style="width: 375px; height: 720px; background: #F5F5F4; border: 1px solid #ECEAE7; border-radius: 28px; font-family: 'Figtree', sans-serif; overflow: hidden; display: flex; flex-direction: column;">
+    <div style="background: #FFFFFF; border-bottom: 1px solid #ECEAE7; padding: 14px 20px;">
+      <div style="font-size: 12px; color: #A3A4A7; font-weight: 600;">De : ESM Lyon · avatars@esm-lyon.fr</div>
+      <div style="font-size: 15px; color: #17181A; font-weight: 700; margin-top: 2px;">Sacha, ta promo raconte son histoire</div>
+    </div>
+    <div style="flex: 1; padding: 20px; display: flex; flex-direction: column;">
+      <div style="background: #FFFFFF; border-radius: 20px; padding: 28px 24px; box-shadow: 0 2px 12px rgba(23,24,26,0.06); display: flex; flex-direction: column; gap: 16px;">
+        <div style="width: 44px; height: 44px; border-radius: 12px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 17px;">EL</div>
+        <div style="font-weight: 800; font-size: 24px; color: #17181A; letter-spacing: -0.02em; line-height: 1.15;">Salut Sacha, ton école t'invite à créer ton avatar.</div>
+        <div style="font-size: 14px; color: #6E6F72; line-height: 1.55;">Une conversation de 15-20 minutes avec Léa, notre intervieweuse IA — et ton parcours devient un avatar qui répond aux lycéens qui se posent les questions que tu te posais.</div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <div style="display: flex;">
+            <div style="width: 26px; height: 26px; border-radius: 999px; background: #D8E8E3; border: 2px solid #FFFFFF;"></div>
+            <div style="width: 26px; height: 26px; border-radius: 999px; background: #B9D6CD; border: 2px solid #FFFFFF; margin-left: -8px;"></div>
+            <div style="width: 26px; height: 26px; border-radius: 999px; background: #8FBFB2; border: 2px solid #FFFFFF; margin-left: -8px;"></div>
+          </div>
+          <div style="font-size: 12.5px; color: #6E6F72; font-weight: 600;">3 anciens de ta promo ont déjà le leur</div>
+        </div>
+        <div style="height: 50px; border-radius: 999px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700;">Créer mon avatar — 15 min</div>
+        <div style="height: 44px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A; display: flex; align-items: center; justify-content: center; font-size: 13.5px; font-weight: 600;">Pas le bon moment ? Choisis quand</div>
+      </div>
+      <div style="font-size: 11.5px; color: #A3A4A7; text-align: center; margin-top: auto; line-height: 1.6;">Lien personnel, valable 7 jours.<br>Tu restes maître de ce que ton avatar raconte.</div>
+    </div>
+  </div>
+  <div style="font-family: 'Figtree', sans-serif; font-size: 12px; color: #8A8B8E;">↳ « Choisis quand » : sélecteur de date → email de rappel → retour ici.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; width: 375px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">E19 · LIEN MAGIQUE</div>
+  <div data-screen-label="3a E19" style="width: 375px; height: 720px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 28px; font-family: 'Figtree', sans-serif; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 40px; box-sizing: border-box;">
+    <div style="width: 84px; height: 84px; border-radius: 999px; background: #E8F3F0; box-shadow: 0 0 0 12px rgba(14,124,102,0.08); display: flex; align-items: center; justify-content: center;">
+      <div style="width: 40px; height: 40px; border-radius: 999px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 19px; font-weight: 800;">✓</div>
+    </div>
+    <div style="font-weight: 800; font-size: 24px; color: #17181A; letter-spacing: -0.02em; text-align: center;">C'est bien toi, Sacha</div>
+    <div style="font-size: 14px; color: #6E6F72; text-align: center; line-height: 1.55;">Pas de mot de passe ici — ton lien suffit.<br>On te connecte…</div>
+    <div style="display: flex; gap: 5px; margin-top: 6px;">
+      <div style="width: 7px; height: 7px; border-radius: 999px; background: #0E7C66;"></div>
+      <div style="width: 7px; height: 7px; border-radius: 999px; background: #9CCabb;"></div>
+      <div style="width: 7px; height: 7px; border-radius: 999px; background: #E8F3F0;"></div>
+    </div>
+    <div style="margin-top: 40px; width: 100%; border-top: 1px dashed #ECEAE7; padding-top: 16px; display: flex; flex-direction: column; gap: 8px;">
+      <div style="font-size: 11px; letter-spacing: 0.1em; color: #A3A4A7; font-weight: 700; text-align: center;">ÉTATS D'ERREUR</div>
+      <div style="background: #F5F5F4; border-radius: 12px; padding: 10px 14px; font-size: 12.5px; color: #6E6F72; font-weight: 500;">Lien expiré — « On t'en renvoie un ? » + email pré-rempli</div>
+      <div style="background: #F5F5F4; border-radius: 12px; padding: 10px 14px; font-size: 12.5px; color: #6E6F72; font-weight: 500;">Lien déjà utilisé · appareil différent — renvoi d'un tap</div>
+    </div>
+  </div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; width: 375px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">E01 · ACCUEIL D'INVITATION</div>
+  <div data-screen-label="3a E01" style="width: 375px; height: 720px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 28px; font-family: 'Figtree', sans-serif; overflow: hidden; display: flex; flex-direction: column;">
+    <div style="background: #E8F3F0; padding: 28px 24px 24px; display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="width: 38px; height: 38px; border-radius: 11px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px;">EL</div>
+        <div style="font-weight: 700; font-size: 14px; color: #0E7C66;">ESM Lyon</div>
+      </div>
+      <div style="font-weight: 800; font-size: 27px; color: #17181A; letter-spacing: -0.02em; line-height: 1.12;">Salut Sacha.<br>Raconte ton parcours, une fois — il servira à des centaines de lycéens.</div>
+    </div>
+    <div style="flex: 1; padding: 24px; display: flex; flex-direction: column; gap: 14px;">
+      <div style="display: flex; gap: 10px;">
+        <div style="flex: 1; background: #F5F5F4; border-radius: 14px; padding: 12px 14px;"><div style="font-weight: 800; font-size: 17px; color: #17181A;">15-20 min</div><div style="font-size: 12px; color: #6E6F72; font-weight: 500;">à la voix, tranquille</div></div>
+        <div style="flex: 1; background: #F5F5F4; border-radius: 14px; padding: 12px 14px;"><div style="font-weight: 800; font-size: 17px; color: #17181A;">Toi d'abord</div><div style="font-size: 12px; color: #6E6F72; font-weight: 500;">tu valides tout avant publication</div></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; padding: 4px 2px;">
+        <div style="display: flex;">
+          <div style="width: 30px; height: 30px; border-radius: 999px; background: #D8E8E3; border: 2px solid #FFFFFF;"></div>
+          <div style="width: 30px; height: 30px; border-radius: 999px; background: #B9D6CD; border: 2px solid #FFFFFF; margin-left: -10px;"></div>
+          <div style="width: 30px; height: 30px; border-radius: 999px; background: #8FBFB2; border: 2px solid #FFFFFF; margin-left: -10px;"></div>
+        </div>
+        <div style="font-size: 13px; color: #6E6F72; font-weight: 600;">Inès, Thomas et Lina (promo 2018) ont déjà leur avatar</div>
+      </div>
+      <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+        <div style="height: 52px; border-radius: 999px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700;">Commencer</div>
+        <div style="height: 46px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600;">Pas le bon moment ? Choisis quand</div>
+      </div>
+    </div>
+  </div>
+  <div style="font-family: 'Figtree', sans-serif; font-size: 12px; color: #8A8B8E;">↳ Lien public (E22) : même écran sans prénom, preuve sociale générique.</div>
+</div>
+    <div style="display: flex; flex-direction: column; gap: 8px; width: 375px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">E02 · CHECK TECHNIQUE</div>
+  <div data-screen-label="3a E02" style="width: 375px; height: 720px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 28px; font-family: 'Figtree', sans-serif; overflow: hidden; display: flex; flex-direction: column; padding: 24px; box-sizing: border-box;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <div style="font-size: 14px; font-weight: 600; color: #6E6F72;">←</div>
+      <div style="display: flex; gap: 4px; margin: 0 auto;">
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #E7E6E3;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #E7E6E3;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #E7E6E3;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #E7E6E3;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #E7E6E3;"></div>
+      </div>
+      <div style="width: 14px;"></div>
+    </div>
+    <div style="margin-top: 28px; width: 48px; height: 48px; border-radius: 14px; background: #E8F3F0; color: #0E7C66; display: flex; align-items: center; justify-content: center; font-size: 21px;">🎙</div>
+    <div style="font-weight: 800; font-size: 25px; color: #17181A; letter-spacing: -0.02em; margin-top: 14px;">10 secondes pour vérifier que tout roule</div>
+    <div style="font-size: 14px; color: #6E6F72; line-height: 1.5; margin-top: 8px;">Rien n'est enregistré pour l'instant.</div>
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 22px;">
+      <div style="display: flex; align-items: center; gap: 12px; border: 1px solid #ECEAE7; border-radius: 16px; padding: 14px 16px;">
+        <div style="width: 26px; height: 26px; border-radius: 999px; background: #0E7C66; color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800;">✓</div>
+        <div style="flex: 1;"><div style="font-weight: 700; font-size: 14px; color: #17181A;">Ton micro</div><div style="font-size: 12px; color: #A3A4A7; font-weight: 500;">on t'entend parfaitement</div></div>
+        <div style="display: flex; gap: 2px; align-items: center;"><div style="width: 3px; height: 8px; border-radius: 2px; background: #0E7C66;"></div><div style="width: 3px; height: 14px; border-radius: 2px; background: #0E7C66;"></div><div style="width: 3px; height: 6px; border-radius: 2px; background: #0E7C66;"></div><div style="width: 3px; height: 11px; border-radius: 2px; background: #0E7C66;"></div></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; border: 1px solid #ECEAE7; border-radius: 16px; padding: 14px 16px;">
+        <div style="width: 26px; height: 26px; border-radius: 999px; background: #0E7C66; color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800;">✓</div>
+        <div style="flex: 1;"><div style="font-weight: 700; font-size: 14px; color: #17181A;">Le son</div><div style="font-size: 12px; color: #A3A4A7; font-weight: 500;">tu entendras Léa — teste si tu veux</div></div>
+        <div style="font-size: 13px; font-weight: 700; color: #0E7C66;">Écouter</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; border: 1px solid #ECEAE7; border-radius: 16px; padding: 14px 16px;">
+        <div style="width: 26px; height: 26px; border-radius: 999px; border: 2.5px solid #0E7C66; border-top-color: transparent; box-sizing: border-box;"></div>
+        <div style="flex: 1;"><div style="font-weight: 700; font-size: 14px; color: #17181A;">Le réseau</div><div style="font-size: 12px; color: #A3A4A7; font-weight: 500;">vérification en cours…</div></div>
+      </div>
+    </div>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+      <div style="height: 52px; border-radius: 999px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700;">C'est bon, on y va</div>
+    </div>
+  </div>
+  <div style="font-family: 'Figtree', sans-serif; font-size: 12px; color: #8A8B8E;">↳ Micro refusé : guide par navigateur · réseau faible : « continue en texte ».</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; width: 375px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">E03 · PROFIL</div>
+  <div data-screen-label="3a E03" style="width: 375px; height: 720px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 28px; font-family: 'Figtree', sans-serif; overflow: hidden; display: flex; flex-direction: column; padding: 24px; box-sizing: border-box;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <div style="font-size: 14px; font-weight: 600; color: #6E6F72;">←</div>
+      <div style="display: flex; gap: 4px; margin: 0 auto;">
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #E7E6E3;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #E7E6E3;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #E7E6E3;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #E7E6E3;"></div>
+      </div>
+      <div style="width: 14px;"></div>
+    </div>
+    <div style="font-weight: 800; font-size: 25px; color: #17181A; letter-spacing: -0.02em; margin-top: 28px;">On a presque tout — vérifie juste</div>
+    <div style="display: flex; align-items: center; gap: 14px; margin-top: 22px; border: 1px solid #ECEAE7; border-radius: 18px; padding: 14px 16px;">
+      <div style="width: 54px; height: 54px; border-radius: 999px; background: #E8F3F0; color: #0E7C66; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 19px;">SM</div>
+      <div style="flex: 1;"><div style="font-weight: 700; font-size: 16px; color: #17181A;">Sacha Morel</div><div style="font-size: 12.5px; color: #A3A4A7; font-weight: 500;">pré-rempli par ton école</div></div>
+      <div style="font-size: 13px; font-weight: 700; color: #0E7C66;">Photo</div>
+    </div>
+    <div style="margin-top: 18px; font-size: 13px; font-weight: 700; color: #17181A;">Année de sortie</div>
+    <div style="display: flex; gap: 8px; margin-top: 8px; align-items: center; justify-content: center;">
+      <div style="font-size: 16px; color: #C4C3C0; font-weight: 600;">2016</div>
+      <div style="font-size: 19px; color: #A3A4A7; font-weight: 600;">2017</div>
+      <div style="font-size: 24px; color: #17181A; font-weight: 800; background: #E8F3F0; border-radius: 12px; padding: 6px 18px;">2018</div>
+      <div style="font-size: 19px; color: #A3A4A7; font-weight: 600;">2019</div>
+      <div style="font-size: 16px; color: #C4C3C0; font-weight: 600;">2020</div>
+    </div>
+    <div style="margin-top: 18px; font-size: 13px; font-weight: 700; color: #17181A;">Ta formation</div>
+    <div style="border: 1px solid #0E7C66; border-radius: 14px; padding: 12px 16px; margin-top: 8px; font-size: 14px; color: #17181A; font-weight: 600;">BTS Comm<span style="color: #A3A4A7;">|</span></div>
+    <div style="display: flex; flex-direction: column; gap: 6px; margin-top: 8px;">
+      <div style="background: #E8F3F0; border-radius: 12px; padding: 11px 14px; font-size: 13.5px; font-weight: 700; color: #0E7C66;">BTS Communication <span style="font-weight: 500; color: #6E6F72;">· depuis 2012</span></div>
+      <div style="background: #F5F5F4; border-radius: 12px; padding: 11px 14px; font-size: 13.5px; font-weight: 600; color: #17181A;">BTS Communication des entreprises <span style="font-weight: 500; color: #A3A4A7;">· ancien nom, avant 2012</span></div>
+      <div style="border: 1px dashed #D6D5D2; border-radius: 12px; padding: 11px 14px; font-size: 13.5px; font-weight: 600; color: #6E6F72;">+ Ajouter la mienne</div>
+    </div>
+    <div style="margin-top: auto; height: 52px; border-radius: 999px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700;">Continuer</div>
+  </div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; width: 375px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">E04 · RETROUVER SON LINKEDIN</div>
+  <div data-screen-label="3a E04" style="width: 375px; height: 720px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 28px; font-family: 'Figtree', sans-serif; overflow: hidden; display: flex; flex-direction: column; padding: 24px; box-sizing: border-box;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <div style="font-size: 14px; font-weight: 600; color: #6E6F72;">←</div>
+      <div style="display: flex; gap: 4px; margin: 0 auto;">
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #E7E6E3;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #E7E6E3;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #E7E6E3;"></div>
+      </div>
+      <div style="width: 14px;"></div>
+    </div>
+    <div style="font-weight: 800; font-size: 25px; color: #17181A; letter-spacing: -0.02em; margin-top: 28px;">On a peut-être retrouvé ton profil</div>
+    <div style="font-size: 14px; color: #6E6F72; line-height: 1.5; margin-top: 8px;">Un tap et ta timeline se remplit toute seule.</div>
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+      <div style="border: 1.5px solid #0E7C66; border-radius: 18px; padding: 16px; display: flex; align-items: center; gap: 14px; background: #FCFEFD;">
+        <div style="width: 52px; height: 52px; border-radius: 999px; background: #D8E8E3;"></div>
+        <div style="flex: 1;"><div style="font-weight: 700; font-size: 15px; color: #17181A;">Sacha Morel</div><div style="font-size: 12.5px; color: #6E6F72; font-weight: 500;">Cheffe de projet loca · Montréal</div></div>
+        <div style="font-size: 13px; font-weight: 700; padding: 9px 16px; border-radius: 999px; background: #0E7C66; color: #FFFFFF;">C'est moi</div>
+      </div>
+      <div style="border: 1px solid #ECEAE7; border-radius: 18px; padding: 16px; display: flex; align-items: center; gap: 14px;">
+        <div style="width: 52px; height: 52px; border-radius: 999px; background: #EDEBE8;"></div>
+        <div style="flex: 1;"><div style="font-weight: 700; font-size: 15px; color: #17181A;">Sacha Morel-Dupont</div><div style="font-size: 12.5px; color: #6E6F72; font-weight: 500;">Comptable · Bordeaux</div></div>
+        <div style="font-size: 13px; font-weight: 700; padding: 9px 16px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A;">C'est moi</div>
+      </div>
+      <div style="border: 1px solid #ECEAE7; border-radius: 18px; padding: 16px; display: flex; align-items: center; gap: 14px;">
+        <div style="width: 52px; height: 52px; border-radius: 999px; background: #EDEBE8;"></div>
+        <div style="flex: 1;"><div style="font-weight: 700; font-size: 15px; color: #17181A;">S. Morel</div><div style="font-size: 12.5px; color: #6E6F72; font-weight: 500;">Illustratrice · Nantes</div></div>
+        <div style="font-size: 13px; font-weight: 700; padding: 9px 16px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A;">C'est moi</div>
+      </div>
+    </div>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;">
+      <div style="height: 46px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600;">Aucun de ces profils</div>
+      <div style="text-align: center; font-size: 13.5px; font-weight: 600; color: #6E6F72; padding: 8px;">Je n'ai pas LinkedIn — pas grave, Léa s'en charge</div>
+    </div>
+  </div>
+  <div style="font-family: 'Figtree', sans-serif; font-size: 12px; color: #8A8B8E;">↳ Repli : saut direct vers E06, la timeline se construira en interview.</div>
+</div>
+    <div style="display: flex; flex-direction: column; gap: 8px; width: 375px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">E05 · TIMELINE CONFIRMABLE</div>
+  <div data-screen-label="3a E05" style="width: 375px; height: 720px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 28px; font-family: 'Figtree', sans-serif; overflow: hidden; display: flex; flex-direction: column; padding: 24px; box-sizing: border-box;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <div style="font-size: 14px; font-weight: 600; color: #6E6F72;">←</div>
+      <div style="display: flex; gap: 4px; margin: 0 auto;">
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #E7E6E3;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #E7E6E3;"></div>
+      </div>
+      <div style="width: 14px;"></div>
+    </div>
+    <div style="font-weight: 800; font-size: 25px; color: #17181A; letter-spacing: -0.02em; margin-top: 28px;">Voilà ce qu'on a importé</div>
+    <div style="font-size: 14px; color: #6E6F72; line-height: 1.5; margin-top: 8px;">Un tap pour confirmer, le crayon pour corriger.</div>
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+      <div style="border: 1px solid #ECEAE7; border-radius: 16px; padding: 14px 16px; display: flex; align-items: center; gap: 12px;">
+        <div style="flex: 1;"><div style="font-weight: 700; font-size: 14.5px; color: #17181A;">BTS Communication — ESM Lyon</div><div style="font-size: 12.5px; color: #A3A4A7; font-weight: 500;">2016 – 2018</div></div>
+        <div style="width: 34px; height: 34px; border-radius: 999px; background: #0E7C66; color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800;">✓</div>
+        <div style="width: 34px; height: 34px; border-radius: 999px; border: 1px solid #ECEAE7; color: #6E6F72; display: flex; align-items: center; justify-content: center; font-size: 14px;">✎</div>
+      </div>
+      <div style="border: 1px solid #ECEAE7; border-radius: 16px; padding: 14px 16px; display: flex; align-items: center; gap: 12px;">
+        <div style="flex: 1;"><div style="font-weight: 700; font-size: 14.5px; color: #17181A;">Chargée de localisation — Ubisoft</div><div style="font-size: 12.5px; color: #A3A4A7; font-weight: 500;">2018 – 2021 · Lyon</div></div>
+        <div style="width: 34px; height: 34px; border-radius: 999px; background: #0E7C66; color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800;">✓</div>
+        <div style="width: 34px; height: 34px; border-radius: 999px; border: 1px solid #ECEAE7; color: #6E6F72; display: flex; align-items: center; justify-content: center; font-size: 14px;">✎</div>
+      </div>
+      <div style="border: 1.5px solid #0E7C66; border-radius: 16px; padding: 14px 16px; background: #FCFEFD;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div style="flex: 1;"><div style="font-weight: 700; font-size: 14.5px; color: #17181A;">Cheffe de projet loca — Behaviour</div><div style="font-size: 12.5px; color: #A3A4A7; font-weight: 500;">2021 – aujourd'hui · Montréal</div></div>
+          <div style="width: 34px; height: 34px; border-radius: 999px; border: 1px solid #ECEAE7; color: #6E6F72; display: flex; align-items: center; justify-content: center; font-size: 15px;">✕</div>
+        </div>
+        <div style="display: flex; gap: 8px; margin-top: 10px;">
+          <div style="flex: 1; border: 1px solid #0E7C66; border-radius: 12px; padding: 9px 12px; font-size: 14px; font-weight: 600; color: #17181A;">Cheffe de projet <span style="color: #A3A4A7;">|</span></div>
+          <div style="font-size: 13px; font-weight: 700; padding: 9px 16px; border-radius: 999px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center;">OK</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: auto; height: 52px; border-radius: 999px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700;">Tout est bon</div>
+  </div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; width: 375px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">E06 · CONSENTEMENTS</div>
+  <div data-screen-label="3a E06" style="width: 375px; height: 720px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 28px; font-family: 'Figtree', sans-serif; overflow: hidden; display: flex; flex-direction: column; padding: 24px; box-sizing: border-box;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <div style="font-size: 14px; font-weight: 600; color: #6E6F72;">←</div>
+      <div style="display: flex; gap: 4px; margin: 0 auto;">
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 22px; height: 6px; border-radius: 999px; background: #E7E6E3;"></div>
+      </div>
+      <div style="width: 14px;"></div>
+    </div>
+    <div style="font-weight: 800; font-size: 25px; color: #17181A; letter-spacing: -0.02em; margin-top: 28px;">Trois choses, clairement</div>
+    <div style="font-size: 14px; color: #6E6F72; line-height: 1.5; margin-top: 8px;">Chaque accord est séparé et révocable quand tu veux.</div>
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
+      <div style="border: 1px solid #ECEAE7; border-radius: 16px; padding: 14px 16px; display: flex; gap: 12px;">
+        <div style="flex: 1;"><div style="font-weight: 700; font-size: 14.5px; color: #17181A;">Ta voix</div><div style="font-size: 12.5px; color: #6E6F72; font-weight: 500; line-height: 1.45;">On enregistre l'interview pour que ton avatar parle avec tes mots — jamais pour autre chose.</div></div>
+        <div style="width: 26px; height: 26px; border-radius: 8px; background: #0E7C66; color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; flex-shrink: 0;">✓</div>
+      </div>
+      <div style="border: 1px solid #ECEAE7; border-radius: 16px; padding: 14px 16px; display: flex; gap: 12px;">
+        <div style="flex: 1;"><div style="font-weight: 700; font-size: 14.5px; color: #17181A;">Ta photo</div><div style="font-size: 12.5px; color: #6E6F72; font-weight: 500; line-height: 1.45;">Affichée sur ta page d'avatar. Sans elle, on met tes initiales — ça marche aussi.</div></div>
+        <div style="width: 26px; height: 26px; border-radius: 8px; background: #0E7C66; color: #FFF; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800; flex-shrink: 0;">✓</div>
+      </div>
+      <div style="border: 1px solid #ECEAE7; border-radius: 16px; padding: 14px 16px; display: flex; gap: 12px;">
+        <div style="flex: 1;"><div style="font-weight: 700; font-size: 14.5px; color: #17181A;">Tes données LinkedIn</div><div style="font-size: 12.5px; color: #6E6F72; font-weight: 500; line-height: 1.45;">Les expériences que tu viens de valider, rien de plus.</div></div>
+        <div style="width: 26px; height: 26px; border-radius: 8px; border: 1.5px solid #D6D5D2; flex-shrink: 0;"></div>
+      </div>
+    </div>
+    <div style="background: #F5F5F4; border-radius: 12px; padding: 10px 14px; font-size: 12px; color: #6E6F72; font-weight: 500; margin-top: 12px;">Réservé aux 18 ans et plus · <span style="font-weight: 700; color: #17181A;">texte complet</span></div>
+    <div style="margin-top: auto; height: 52px; border-radius: 999px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700;">J'accepte — on commence</div>
+  </div>
+  <div style="font-family: 'Figtree', sans-serif; font-size: 12px; color: #8A8B8E;">↳ Refus partiel accepté : la suite s'adapte, conséquences expliquées calmement.</div>
+</div>
+    <div style="display: flex; flex-direction: column; gap: 8px; width: 375px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">E07 · SESSION D'INTERVIEW — MOBILE (ÉCRAN SIGNATURE)</div>
+  <div data-screen-label="3a E07" style="width: 375px; height: 720px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 28px; font-family: 'Figtree', sans-serif; overflow: hidden; display: flex; flex-direction: column;">
+    <div style="display: flex; align-items: center; gap: 10px; padding: 16px 20px 10px;">
+      <div style="font-size: 14px; font-weight: 600; color: #6E6F72;">⏸</div>
+      <div style="font-size: 13px; font-weight: 700; color: #17181A; background: #F5F5F4; border-radius: 999px; padding: 6px 14px; margin: 0 auto;">Premier emploi · 2/4</div>
+      <div style="font-size: 12.5px; font-weight: 600; color: #A3A4A7;">06:12</div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 10px 0 6px;">
+      <div style="width: 64px; height: 64px; border-radius: 999px; background: #E8F3F0; box-shadow: 0 0 0 9px rgba(14,124,102,0.10), 0 0 0 19px rgba(14,124,102,0.05); display: flex; align-items: center; justify-content: center;">
+        <div style="width: 42px; height: 42px; border-radius: 999px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px;">L</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 6px; background: #E8F3F0; color: #0E7C66; border-radius: 999px; padding: 5px 14px; font-size: 12.5px; font-weight: 700;">
+        Léa t'écoute
+        <div style="display: flex; gap: 2px; align-items: center;"><div style="width: 3px; height: 7px; border-radius: 2px; background: #0E7C66;"></div><div style="width: 3px; height: 12px; border-radius: 2px; background: #0E7C66;"></div><div style="width: 3px; height: 5px; border-radius: 2px; background: #0E7C66;"></div><div style="width: 3px; height: 10px; border-radius: 2px; background: #0E7C66;"></div></div>
+      </div>
+    </div>
+    <div style="flex: 1; padding: 10px 20px; display: flex; flex-direction: column; gap: 8px; min-height: 0;">
+      <div style="background: #F5F5F4; border-radius: 16px 16px 16px 6px; padding: 11px 15px; font-size: 14.5px; line-height: 1.45; color: #17181A; max-width: 85%;">Ton premier poste chez Ubisoft, donc.</div>
+      <div style="background: #F5F5F4; border-radius: 6px 16px 16px 16px; padding: 11px 15px; font-size: 14.5px; line-height: 1.45; color: #17181A; max-width: 85%;">Raconte-moi la semaine où tu as compris que tu étais au bon endroit.</div>
+      <div style="background: #0E7C66; color: #FFFFFF; border-radius: 16px 16px 6px 16px; padding: 11px 15px; font-size: 14.5px; line-height: 1.45; max-width: 85%; align-self: flex-end;">C'était pendant le rush de fin de prod. On m'a confié la loca FR alors que…</div>
+      <div style="display: flex; gap: 8px; justify-content: center; margin-top: 6px;">
+        <div style="font-size: 12.5px; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A;">Garder privé</div>
+        <div style="font-size: 12.5px; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A;">Passer</div>
+        <div style="font-size: 12.5px; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A;">Reformule</div>
+        <div style="font-size: 12.5px; font-weight: 600; padding: 8px 14px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A;">⌨</div>
+      </div>
+    </div>
+    <div style="background: #F5F5F4; border-radius: 22px 22px 0 0; padding: 12px 20px 18px; box-shadow: 0 -4px 20px rgba(23,24,26,0.07);">
+      <div style="width: 38px; height: 4px; border-radius: 999px; background: #D6D5D2; margin: 0 auto;"></div>
+      <div style="display: flex; align-items: baseline; margin-top: 10px;">
+        <div style="font-weight: 800; font-size: 15px; color: #17181A;">Ton parcours se construit</div>
+        <div style="margin-left: auto; font-size: 12px; font-weight: 700; color: #0E7C66;">Tout voir ↑</div>
+      </div>
+      <div style="display: flex; gap: 8px; margin-top: 10px;">
+        <div style="flex: 1; background: #FFFFFF; border-radius: 12px; padding: 10px 12px;"><div style="font-size: 12px; font-weight: 700; color: #17181A;">BTS Comm ✓</div><div style="font-size: 11px; color: #A3A4A7; font-weight: 500;">validé</div></div>
+        <div style="flex: 1; background: #FFFFFF; border-radius: 12px; padding: 10px 12px;"><div style="font-size: 12px; font-weight: 700; color: #17181A;">Ubisoft</div><div style="font-size: 11px; color: #0E7C66; font-weight: 600;">s'enrichit…</div></div>
+        <div style="flex: 1; background: #FFFFFF; border-radius: 12px; padding: 10px 12px;"><div style="font-size: 12px; font-weight: 700; color: #17181A;">1 citation</div><div style="font-size: 11px; color: #A3A4A7; font-weight: 500;">publique</div></div>
+      </div>
+    </div>
+  </div>
+  <div style="font-family: 'Figtree', sans-serif; font-size: 12px; color: #8A8B8E;">↳ Appel entrant / perte de focus : pause auto, reprise en un tap · récap complet entre chaque thème.</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; width: 375px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">E07 · ÉTAT PAUSE AUTO</div>
+  <div data-screen-label="3a E07 pause" style="width: 375px; height: 720px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 28px; font-family: 'Figtree', sans-serif; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; box-sizing: border-box; gap: 16px;">
+    <div style="width: 84px; height: 84px; border-radius: 999px; background: #F5F5F4; display: flex; align-items: center; justify-content: center; font-size: 30px; color: #6E6F72;">⏸</div>
+    <div style="font-weight: 800; font-size: 24px; color: #17181A; letter-spacing: -0.02em; text-align: center;">On t'attend, prends ton appel</div>
+    <div style="font-size: 14px; color: #6E6F72; text-align: center; line-height: 1.55;">Rien n'est perdu — la conversation reprendra exactement où vous en étiez.</div>
+    <div style="background: #F5F5F4; border-radius: 14px; padding: 12px 18px; font-size: 13px; font-weight: 600; color: #6E6F72;">Thème en cours : Premier emploi · 2/4</div>
+    <div style="height: 52px; border-radius: 999px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; width: 100%; margin-top: 14px;">Reprendre</div>
+    <div style="font-size: 13.5px; font-weight: 600; color: #6E6F72;">Continuer par écrit</div>
+  </div>
+</div>
+    <div style="display: flex; flex-direction: column; gap: 8px; width: 375px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">E08 · VALIDATION PAR SECTIONS</div>
+  <div data-screen-label="3a E08" style="width: 375px; height: 720px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 28px; font-family: 'Figtree', sans-serif; overflow: hidden; display: flex; flex-direction: column; padding: 24px; box-sizing: border-box;">
+    <div style="font-weight: 800; font-size: 25px; color: #17181A; letter-spacing: -0.02em;">Ton histoire, ligne par ligne</div>
+    <div style="font-size: 14px; color: #6E6F72; line-height: 1.5; margin-top: 8px;">Tout est proposé en public — change ce que tu veux.</div>
+    <div style="font-size: 11px; letter-spacing: 0.1em; color: #A3A4A7; font-weight: 700; margin-top: 20px;">PREMIER EMPLOI</div>
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+      <div style="border: 1px solid #ECEAE7; border-radius: 16px; padding: 13px 15px;">
+        <div style="font-size: 13.5px; color: #17181A; line-height: 1.5; font-weight: 500;">« On m'a fait confiance avant que je me fasse confiance. »</div>
+        <div style="display: flex; gap: 4px; margin-top: 10px; background: #F5F5F4; border-radius: 999px; padding: 3px; width: fit-content;">
+          <div style="font-size: 11.5px; font-weight: 700; padding: 5px 12px; border-radius: 999px; background: #0E7C66; color: #FFFFFF;">Public</div>
+          <div style="font-size: 11.5px; font-weight: 600; padding: 5px 12px; border-radius: 999px; color: #6E6F72;">École</div>
+          <div style="font-size: 11.5px; font-weight: 600; padding: 5px 12px; border-radius: 999px; color: #6E6F72;">Privé</div>
+        </div>
+      </div>
+      <div style="border: 1px solid #ECEAE7; border-radius: 16px; padding: 13px 15px;">
+        <div style="font-size: 13.5px; color: #17181A; line-height: 1.5; font-weight: 500;">« Le salaire junior à Lyon, personne ne t'en parle avant. »</div>
+        <div style="display: flex; gap: 4px; margin-top: 10px; background: #F5F5F4; border-radius: 999px; padding: 3px; width: fit-content;">
+          <div style="font-size: 11.5px; font-weight: 600; padding: 5px 12px; border-radius: 999px; color: #6E6F72;">Public</div>
+          <div style="font-size: 11.5px; font-weight: 700; padding: 5px 12px; border-radius: 999px; background: #17181A; color: #FFFFFF;">École</div>
+          <div style="font-size: 11.5px; font-weight: 600; padding: 5px 12px; border-radius: 999px; color: #6E6F72;">Privé</div>
+        </div>
+      </div>
+    </div>
+    <div style="font-size: 11px; letter-spacing: 0.1em; color: #A3A4A7; font-weight: 700; margin-top: 16px;">INTERNATIONAL</div>
+    <div style="border: 1px solid #ECEAE7; border-radius: 16px; padding: 13px 15px; margin-top: 10px;">
+      <div style="font-size: 13.5px; color: #17181A; line-height: 1.5; font-weight: 500;">« Partir à Montréal, c'était pas un plan de carrière, c'était une intuition. »</div>
+      <div style="display: flex; gap: 4px; margin-top: 10px; background: #F5F5F4; border-radius: 999px; padding: 3px; width: fit-content;">
+        <div style="font-size: 11.5px; font-weight: 700; padding: 5px 12px; border-radius: 999px; background: #0E7C66; color: #FFFFFF;">Public</div>
+        <div style="font-size: 11.5px; font-weight: 600; padding: 5px 12px; border-radius: 999px; color: #6E6F72;">École</div>
+        <div style="font-size: 11.5px; font-weight: 600; padding: 5px 12px; border-radius: 999px; color: #6E6F72;">Privé</div>
+      </div>
+    </div>
+    <div style="margin-top: auto; height: 52px; border-radius: 999px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700;">Valider mon histoire</div>
+  </div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; width: 375px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">E09 · CHOIX DU TON</div>
+  <div data-screen-label="3a E09" style="width: 375px; height: 720px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 28px; font-family: 'Figtree', sans-serif; overflow: hidden; display: flex; flex-direction: column; padding: 24px; box-sizing: border-box;">
+    <div style="font-weight: 800; font-size: 25px; color: #17181A; letter-spacing: -0.02em;">Lequel te ressemble le plus ?</div>
+    <div style="font-size: 14px; color: #6E6F72; line-height: 1.5; margin-top: 8px;">Trois réponses, toutes tirées de tes propres mots.</div>
+    <div style="background: #F5F5F4; border-radius: 16px 16px 16px 6px; padding: 12px 15px; font-size: 14px; color: #17181A; line-height: 1.45; margin-top: 18px; max-width: 90%;">Un lycéen demande : « C'était dur de trouver ton premier job ? »</div>
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 14px;">
+      <div style="border: 1.5px solid #0E7C66; border-radius: 18px; padding: 14px 16px; background: #FCFEFD;">
+        <div style="font-size: 13.5px; color: #17181A; line-height: 1.5; font-weight: 500;">« Honnêtement ? Oui. Mais pas comme je l'imaginais — le plus dur c'était d'oser postuler. »</div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-top: 10px;">
+          <div style="width: 32px; height: 32px; border-radius: 999px; background: #E8F3F0; color: #0E7C66; display: flex; align-items: center; justify-content: center; font-size: 13px;">▶</div>
+          <div style="display: flex; gap: 2px; align-items: center;"><div style="width: 3px; height: 6px; border-radius: 2px; background: #9CCABB;"></div><div style="width: 3px; height: 11px; border-radius: 2px; background: #9CCABB;"></div><div style="width: 3px; height: 8px; border-radius: 2px; background: #9CCABB;"></div><div style="width: 3px; height: 13px; border-radius: 2px; background: #9CCABB;"></div><div style="width: 3px; height: 7px; border-radius: 2px; background: #9CCABB;"></div></div>
+          <div style="margin-left: auto; font-size: 13px; font-weight: 700; padding: 8px 16px; border-radius: 999px; background: #0E7C66; color: #FFFFFF;">C'est moi</div>
+        </div>
+      </div>
+      <div style="border: 1px solid #ECEAE7; border-radius: 18px; padding: 14px 16px;">
+        <div style="font-size: 13.5px; color: #17181A; line-height: 1.5; font-weight: 500;">« Ça a pris quatre mois. Quatre mois utiles : j'ai appris à me présenter. »</div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-top: 10px;">
+          <div style="width: 32px; height: 32px; border-radius: 999px; background: #F5F5F4; color: #6E6F72; display: flex; align-items: center; justify-content: center; font-size: 13px;">▶</div>
+          <div style="margin-left: auto; font-size: 13px; font-weight: 700; padding: 8px 16px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A;">C'est moi</div>
+        </div>
+      </div>
+      <div style="border: 1px solid #ECEAE7; border-radius: 18px; padding: 14px 16px;">
+        <div style="font-size: 13.5px; color: #17181A; line-height: 1.5; font-weight: 500;">« Dur, non. Long, oui. Et le réseau des anciens a tout changé. »</div>
+        <div style="display: flex; align-items: center; gap: 10px; margin-top: 10px;">
+          <div style="width: 32px; height: 32px; border-radius: 999px; background: #F5F5F4; color: #6E6F72; display: flex; align-items: center; justify-content: center; font-size: 13px;">▶</div>
+          <div style="margin-left: auto; font-size: 13px; font-weight: 700; padding: 8px 16px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A;">C'est moi</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: auto; text-align: center; font-size: 13.5px; font-weight: 600; color: #6E6F72; padding: 10px;">Aucune ne me ressemble — propose-m'en trois autres</div>
+  </div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px; width: 375px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">E20 · FIN &amp; FIERTÉ</div>
+  <div data-screen-label="3a E20" style="width: 375px; height: 720px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 28px; font-family: 'Figtree', sans-serif; overflow: hidden; display: flex; flex-direction: column; padding: 24px; box-sizing: border-box;">
+    <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;">
+      <div style="background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 20px; padding: 24px; width: 100%; box-shadow: 0 10px 30px rgba(14,124,102,0.12); display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <div style="width: 30px; height: 30px; border-radius: 9px; background: #0E7C66; color: #FFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 12px;">EL</div>
+          <div style="font-size: 11px; font-weight: 700; color: #0E7C66; background: #E8F3F0; border-radius: 999px; padding: 4px 12px;">En validation par l'école</div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div style="width: 62px; height: 62px; border-radius: 999px; background: #E8F3F0; color: #0E7C66; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 21px;">SM</div>
+          <div><div style="font-weight: 800; font-size: 19px; color: #17181A;">Sacha Morel</div><div style="font-size: 13px; color: #6E6F72; font-weight: 500;">BTS Communication · promo 2018</div></div>
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+          <div style="font-size: 11.5px; font-weight: 600; color: #17181A; background: #F5F5F4; border-radius: 999px; padding: 5px 12px;">Premier emploi</div>
+          <div style="font-size: 11.5px; font-weight: 600; color: #17181A; background: #F5F5F4; border-radius: 999px; padding: 5px 12px;">Partir à Montréal</div>
+          <div style="font-size: 11.5px; font-weight: 600; color: #17181A; background: #F5F5F4; border-radius: 999px; padding: 5px 12px;">Jeu vidéo</div>
+        </div>
+      </div>
+      <div style="font-weight: 800; font-size: 24px; color: #17181A; letter-spacing: -0.02em; text-align: center;">Ton avatar est en préparation</div>
+      <div style="font-size: 14px; color: #6E6F72; text-align: center; line-height: 1.55;">17 minutes de ta vie, des centaines de lycéens éclairés. L'école valide, puis il parle pour toi.</div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <div style="height: 52px; border-radius: 999px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700;">Tester mon avatar</div>
+      <div style="height: 46px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600;">Prévenir un proche</div>
+    </div>
+  </div>
+  <div style="font-family: 'Figtree', sans-serif; font-size: 12px; color: #8A8B8E;">↳ « Tester mon avatar » → E10 Atelier · « Prévenir un proche » → lien E21.</div>
+</div>
+  </div>
+</section>
+<section style="padding: 48px; display: flex; flex-direction: column; gap: 32px; border-bottom: 1px dashed #C8C5BE;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6B6862; letter-spacing: 0.08em;">TURN 2 — PISTE D « CLAIR » · MODERNE AÉRÉE, THÉMABLE ÉCOLE</div>
+  <div id="2a" style="display: flex; flex-direction: column; gap: 20px;">
+  <div style="display: flex; align-items: baseline; gap: 16px;">
+    <a href="#2a" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #17181A; color: #FFFFFF; padding: 4px 10px; border-radius: 999px; text-decoration: none;">2a</a>
+    <div style="font-family: 'Figtree', sans-serif; font-weight: 800; font-size: 30px; color: #17181A; letter-spacing: -0.02em;">Piste D · « Clair » — moderne aérée</div>
+    <div style="font-family: 'Figtree', sans-serif; font-size: 14px; color: #8A8B8E;">Blanc généreux, surfaces gris doux, CTA pilule pleine largeur, wizard à tirets, carte-artefact qui se construit à droite. La couleur école teinte tout le côté interviewé.</div>
+  </div>
+  <div style="display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap;">
+    <div style="width: 360px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 24px; font-family: 'Figtree', sans-serif; box-shadow: 0 2px 12px rgba(23,24,26,0.05);">
+      <div style="font-weight: 800; font-size: 42px; line-height: 1; color: #17181A; letter-spacing: -0.03em;">Clair</div>
+      <div style="font-size: 14px; line-height: 1.55; color: #6E6F72;">Le calme d'un outil grand public bien fini : beaucoup de blanc, une seule couleur à l'écran — celle de l'école — déclinée en plein, en teinte à 8 %, et en halo. Chaque étape montre l'artefact qui se remplit à droite.</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; color: #A3A4A7; font-weight: 600;">PALETTE — INTERVIEWÉ</div>
+        <div style="display: flex; gap: 8px;">
+          <div style="flex: 1; height: 56px; border-radius: 12px; background: #FFFFFF; border: 1px solid #ECEAE7;"></div>
+          <div style="flex: 1; height: 56px; border-radius: 12px; background: #F5F5F4;"></div>
+          <div style="flex: 1; height: 56px; border-radius: 12px; background: #17181A;"></div>
+          <div style="flex: 1; height: 56px; border-radius: 12px; background: #E8F3F0; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; color: #0E7C66; font-size: 10px; font-weight: 700;">TEINTE 8%</div>
+          <div style="flex: 1; height: 56px; border-radius: 12px; background: #0E7C66; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; color: #FFFFFF; font-size: 10px; font-weight: 700;">ÉCOLE</div>
+        </div>
+        <div style="display: flex; gap: 6px; align-items: center;">
+          <div style="font-size: 11px; color: #A3A4A7;">slot accent :</div>
+          <div style="width: 22px; height: 22px; border-radius: 999px; background: #8A1E2D;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 999px; background: #1D4ED8;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 999px; background: #C2570C;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 999px; background: #5B45E0;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 999px; background: #0E7C66; outline: 2px solid #17181A; outline-offset: 2px;"></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; color: #A3A4A7; font-weight: 600;">PALETTE — STUDIO (FIXE)</div>
+        <div style="display: flex; gap: 8px;">
+          <div style="flex: 1; height: 40px; border-radius: 12px; background: #FFFFFF; border: 1px solid #ECEAE7;"></div>
+          <div style="flex: 1; height: 40px; border-radius: 12px; background: #FEF0E8;"></div>
+          <div style="flex: 1; height: 40px; border-radius: 12px; background: #F1662B;"></div>
+          <div style="flex: 1; height: 40px; border-radius: 12px; background: #17181A;"></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid #ECEAE7; padding-top: 18px;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; color: #A3A4A7; font-weight: 600;">TYPOGRAPHIE</div>
+        <div style="font-weight: 800; font-size: 26px; color: #17181A; letter-spacing: -0.02em;">Figtree — titres en 800 serré</div>
+        <div style="font-size: 15px; color: #17181A;">Figtree 400/600 — interface, une seule famille</div>
+        <div style="font-size: 15px; font-weight: 600; color: #0E7C66;">« Pas tout à fait toi ? Affinons-le. »</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #ECEAE7; padding-top: 18px; font-size: 13px; color: #6E6F72; line-height: 1.5;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; color: #A3A4A7; font-weight: 600;">PRINCIPES</div>
+        <div>CTA pilule pleine largeur + secondaire fantôme dessous · wizard à tirets · icônes en pastille teintée · rayons 12-20 · ombres quasi nulles · zéro emoji, la chaleur vient de la copie.</div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">ÉCRAN 7 — SESSION D'INTERVIEW (INTERVIEWÉ, THÈME ESM LYON)</div>
+  <div data-screen-label="2a Écran 7" style="width: 1180px; height: 760px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 20px; box-shadow: 0 8px 40px rgba(23,24,26,0.08); font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden;">
+    <div style="display: flex; align-items: center; gap: 20px; padding: 16px 28px; border-bottom: 1px solid #F0EFED;">
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: #6E6F72;"><span style="color: #A3A4A7;">←</span> Quitter</div>
+      <div style="display: flex; gap: 6px; margin: 0 auto;">
+        <div style="width: 34px; height: 7px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 34px; height: 7px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 34px; height: 7px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 34px; height: 7px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 34px; height: 7px; border-radius: 999px; background: #0E7C66;"></div>
+        <div style="width: 34px; height: 7px; border-radius: 999px; background: #E7E6E3;"></div>
+        <div style="width: 34px; height: 7px; border-radius: 999px; background: #E7E6E3;"></div>
+        <div style="width: 34px; height: 7px; border-radius: 999px; background: #E7E6E3;"></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <div style="font-size: 13px; font-weight: 600; color: #17181A; background: #F5F5F4; border-radius: 999px; padding: 7px 14px;">Premier emploi · 2/4</div>
+        <div style="font-size: 13px; font-weight: 600; color: #6E6F72; border: 1px solid #ECEAE7; border-radius: 999px; padding: 7px 14px;">⏱ 06:12</div>
+      </div>
+    </div>
+    <div style="flex: 1; display: flex; min-height: 0;">
+      <div style="flex: 1.2; display: flex; flex-direction: column; padding: 32px 40px; gap: 20px;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 8px 0 4px;">
+          <div style="width: 84px; height: 84px; border-radius: 999px; background: #E8F3F0; box-shadow: 0 0 0 10px rgba(14,124,102,0.10), 0 0 0 22px rgba(14,124,102,0.05); display: flex; align-items: center; justify-content: center;">
+            <div style="width: 56px; height: 56px; border-radius: 999px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px;">L</div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; background: #E8F3F0; color: #0E7C66; border-radius: 999px; padding: 6px 16px; font-size: 13px; font-weight: 700;">
+            Léa t'écoute
+            <div style="display: flex; gap: 2px; align-items: center;">
+              <div style="width: 3px; height: 8px; border-radius: 2px; background: #0E7C66;"></div>
+              <div style="width: 3px; height: 13px; border-radius: 2px; background: #0E7C66;"></div>
+              <div style="width: 3px; height: 6px; border-radius: 2px; background: #0E7C66;"></div>
+              <div style="width: 3px; height: 11px; border-radius: 2px; background: #0E7C66;"></div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px; max-width: 420px;">
+          <div style="background: #F5F5F4; border-radius: 16px 16px 16px 6px; padding: 12px 16px; font-size: 15px; line-height: 1.5; color: #17181A;">Ton premier poste chez Ubisoft, donc.</div>
+          <div style="background: #F5F5F4; border-radius: 6px 16px 16px 16px; padding: 12px 16px; font-size: 15px; line-height: 1.5; color: #17181A;">Raconte-moi la semaine où tu as compris que tu étais au bon endroit.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px; max-width: 440px; align-self: flex-end; align-items: flex-end;">
+          <div style="background: #0E7C66; color: #FFFFFF; border-radius: 16px 16px 6px 16px; padding: 12px 16px; font-size: 15px; line-height: 1.5;">C'était pendant le rush de fin de prod. On m'a confié la loca FR alors que j'étais junior…</div>
+          <div style="font-size: 12px; color: #A3A4A7; font-weight: 500;">transcription en direct · 0:42</div>
+        </div>
+        <div style="margin-top: auto; display: flex; flex-direction: column; gap: 10px;">
+          <div style="display: flex; gap: 8px; justify-content: center;">
+            <div style="font-size: 13px; font-weight: 600; padding: 9px 18px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A; background: #FFFFFF;">Garder privé</div>
+            <div style="font-size: 13px; font-weight: 600; padding: 9px 18px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A; background: #FFFFFF;">Passer</div>
+            <div style="font-size: 13px; font-weight: 600; padding: 9px 18px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A; background: #FFFFFF;">Reformule</div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="flex: 1; display: flex; align-items: center; gap: 10px; border: 1px solid #ECEAE7; border-radius: 999px; padding: 12px 20px; font-size: 14px; color: #A3A4A7;">Préfères écrire ? Tape ta réponse…</div>
+            <div style="width: 48px; height: 48px; border-radius: 999px; background: #0E7C66; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 18px;">🎙</div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 400px; background: #F5F5F4; padding: 28px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="display: flex; align-items: baseline;">
+          <div style="font-weight: 800; font-size: 18px; color: #17181A; letter-spacing: -0.01em;">Ton avatar se construit</div>
+          <div style="margin-left: auto; font-size: 12px; font-weight: 600; color: #6E6F72;">2/4 thèmes</div>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 18px; padding: 20px; box-shadow: 0 2px 10px rgba(23,24,26,0.05); display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <div style="width: 44px; height: 44px; border-radius: 999px; background: #E8F3F0; color: #0E7C66; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px;">S</div>
+            <div><div style="font-weight: 700; font-size: 15px; color: #17181A;">Sacha Morel</div><div style="font-size: 12px; color: #A3A4A7;">BTS Communication · promo 2018</div></div>
+            <div style="margin-left: auto; font-size: 11px; font-weight: 700; color: #0E7C66; background: #E8F3F0; border-radius: 999px; padding: 4px 10px;">ESM Lyon</div>
+          </div>
+          <div style="border-top: 1px dashed #ECEAE7;"></div>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <div style="width: 8px; height: 8px; border-radius: 999px; background: #0E7C66;"></div>
+              <div style="flex: 1;"><div style="font-size: 13px; font-weight: 600; color: #17181A;">BTS Communication</div><div style="font-size: 12px; color: #A3A4A7;">2016-2018 · validé</div></div>
+              <div style="font-size: 13px; color: #0E7C66;">✓</div>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center;">
+              <div style="width: 8px; height: 8px; border-radius: 999px; background: #0E7C66;"></div>
+              <div style="flex: 1;"><div style="font-size: 13px; font-weight: 600; color: #17181A;">Chargée de loca · Ubisoft</div><div style="font-size: 12px; color: #0E7C66; font-weight: 600;">s'enrichit en ce moment…</div></div>
+              <div style="width: 13px; height: 13px; border-radius: 999px; border: 2px solid #0E7C66; border-top-color: transparent;"></div>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center; opacity: 0.55;">
+              <div style="width: 8px; height: 8px; border-radius: 999px; background: #D6D5D2;"></div>
+              <div style="flex: 1; font-size: 12px; color: #6E6F72;">Montréal — thème « International » à venir</div>
+            </div>
+          </div>
+        </div>
+        <div style="font-size: 11px; letter-spacing: 0.1em; color: #A3A4A7; font-weight: 700; margin-top: 4px;">CITATIONS RETENUES</div>
+        <div style="background: #FFFFFF; border-radius: 16px; padding: 16px; box-shadow: 0 2px 10px rgba(23,24,26,0.05);">
+          <div style="font-size: 14px; font-weight: 500; color: #17181A; line-height: 1.5;">« On m'a fait confiance avant que je me fasse confiance. »</div>
+          <div style="display: flex; gap: 6px; margin-top: 10px;">
+            <div style="font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: #E8F3F0; color: #0E7C66;">Public</div>
+            <div style="font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 999px; border: 1px solid #ECEAE7; color: #6E6F72;">Réservé école</div>
+          </div>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 16px; padding: 16px; box-shadow: 0 2px 10px rgba(23,24,26,0.05);">
+          <div style="font-size: 14px; font-weight: 500; color: #17181A; line-height: 1.5;">« Le salaire junior à Lyon, personne ne t'en parle avant. »</div>
+          <div style="display: flex; gap: 6px; margin-top: 10px;">
+            <div style="font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: #F5F5F4; color: #6E6F72; border: 1px solid #ECEAE7;">Privé — visible par toi seul</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">ÉCRAN 13 — STUDIO · CAMPAGNES (IDENTITÉ FIXE)</div>
+  <div data-screen-label="2a Écran 13" style="width: 1180px; height: 760px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 20px; box-shadow: 0 8px 40px rgba(23,24,26,0.08); font-family: 'Figtree', sans-serif; display: flex; flex-direction: column; overflow: hidden;">
+    <div style="display: flex; align-items: center; gap: 24px; padding: 0 28px; height: 56px; border-bottom: 1px solid #F0EFED;">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="width: 30px; height: 30px; border-radius: 10px; background: #FEF0E8; color: #F1662B; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px;">C</div>
+        <div style="font-weight: 800; font-size: 16px; color: #17181A; letter-spacing: -0.01em;">Clair <span style="font-weight: 600; color: #A3A4A7;">Studio</span></div>
+      </div>
+      <div style="display: flex; gap: 4px; margin: 0 auto; font-size: 14px; font-weight: 600;">
+        <div style="padding: 8px 16px; border-radius: 999px; color: #6E6F72;">Stratégie</div>
+        <div style="padding: 8px 16px; border-radius: 999px; color: #6E6F72;">Trames</div>
+        <div style="padding: 8px 16px; border-radius: 999px; background: #FEF0E8; color: #F1662B;">Campagnes</div>
+        <div style="padding: 8px 16px; border-radius: 999px; color: #6E6F72;">Revue <span style="background: #F1662B; color: #FFF; border-radius: 999px; padding: 1px 7px; font-size: 11px; font-weight: 700;">4</span></div>
+        <div style="padding: 8px 16px; border-radius: 999px; color: #6E6F72;">Formations</div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="font-size: 13px; font-weight: 600; color: #6E6F72; border: 1px solid #ECEAE7; border-radius: 999px; padding: 7px 14px;">🔍 Rechercher ⌘K</div>
+        <div style="width: 32px; height: 32px; border-radius: 999px; background: #F5F5F4; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; color: #17181A;">EL</div>
+      </div>
+    </div>
+    <div style="flex: 1; display: flex; min-height: 0;">
+      <div style="width: 220px; border-right: 1px solid #F0EFED; padding: 22px 14px; display: flex; flex-direction: column; gap: 2px; font-size: 13.5px; font-weight: 600;">
+        <div style="font-size: 11px; letter-spacing: 0.08em; color: #A3A4A7; padding: 0 12px 8px;">CAMPAGNES</div>
+        <div style="padding: 9px 12px; border-radius: 10px; background: #F5F5F4; color: #17181A;">Nouvelle campagne</div>
+        <div style="padding: 9px 12px; border-radius: 10px; color: #6E6F72;">En cours <span style="color: #A3A4A7; font-weight: 500;">2</span></div>
+        <div style="padding: 9px 12px; border-radius: 10px; color: #6E6F72;">Terminées</div>
+        <div style="padding: 9px 12px; border-radius: 10px; color: #6E6F72;">Modèles d'invitation</div>
+        <div style="margin-top: 18px; background: #FFFFFF; border: 1px solid #ECEAE7; border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 6px;">
+          <div style="width: 32px; height: 32px; border-radius: 999px; background: #FEF0E8; color: #F1662B; display: flex; align-items: center; justify-content: center; font-size: 15px;">✦</div>
+          <div style="font-size: 13px; font-weight: 700; color: #17181A;">Budget restant</div>
+          <div style="font-size: 12px; font-weight: 500; color: #6E6F72; line-height: 1.45;">212 € sur le trimestre. Une campagne de 87 invitations en consomme ≈ 43 €.</div>
+        </div>
+        <div style="margin-top: auto; padding: 9px 12px; font-size: 12px; font-weight: 600; color: #A3A4A7;">ESM Lyon · Studio</div>
+      </div>
+      <div style="flex: 1; padding: 28px 36px; display: flex; flex-direction: column; gap: 18px; min-width: 0; overflow: hidden;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <div><div style="font-weight: 800; font-size: 26px; color: #17181A; letter-spacing: -0.02em;">Nouvelle campagne</div><div style="font-size: 13px; color: #A3A4A7; font-weight: 500;">Promo 2020 · brouillon enregistré à 16:04</div></div>
+          <div style="margin-left: auto; display: flex; gap: 6px;">
+            <div style="width: 30px; height: 6px; border-radius: 999px; background: #F1662B;"></div>
+            <div style="width: 30px; height: 6px; border-radius: 999px; background: #F1662B;"></div>
+            <div style="width: 30px; height: 6px; border-radius: 999px; background: #EDEBE8;"></div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 20px; flex: 1; min-height: 0;">
+          <div style="flex: 1.35; display: flex; flex-direction: column; gap: 14px;">
+            <div style="border: 1px solid #ECEAE7; border-radius: 16px; padding: 18px 20px;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <div style="width: 34px; height: 34px; border-radius: 10px; background: #FEF0E8; color: #F1662B; display: flex; align-items: center; justify-content: center; font-size: 16px;">📄</div>
+                <div><div style="font-weight: 700; font-size: 15px; color: #17181A;">alumni_2020.csv</div><div style="font-size: 12px; color: #A3A4A7; font-weight: 500;">92 lignes · importé à l'instant</div></div>
+                <div style="margin-left: auto; font-size: 12px; font-weight: 700; color: #0E8A5F; background: #E8F5EF; border-radius: 999px; padding: 4px 12px;">89 prêtes</div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 14px; font-size: 13px;">
+                <div style="display: flex; align-items: center; gap: 10px;"><div style="width: 120px; color: #6E6F72; font-weight: 500;">mail_perso</div><div style="color: #C4C3C0;">→</div><div style="font-weight: 700; color: #17181A;">Email</div><div style="margin-left: auto; color: #0E8A5F; font-weight: 600;">✓ 92/92</div></div>
+                <div style="display: flex; align-items: center; gap: 10px;"><div style="width: 120px; color: #6E6F72; font-weight: 500;">prenom_nom</div><div style="color: #C4C3C0;">→</div><div style="font-weight: 700; color: #17181A;">Nom complet</div><div style="margin-left: auto; color: #0E8A5F; font-weight: 600;">✓</div></div>
+                <div style="display: flex; align-items: center; gap: 10px;"><div style="width: 120px; color: #6E6F72; font-weight: 500;">cursus</div><div style="color: #C4C3C0;">→</div><div style="font-weight: 700; color: #B45309;">Formation</div><div style="margin-left: auto; color: #B45309; font-weight: 600; background: #FDF3E7; border-radius: 999px; padding: 3px 10px; font-size: 12px;">3 alias à confirmer</div></div>
+              </div>
+            </div>
+            <div style="border: 1px solid #ECEAE7; border-radius: 16px; padding: 18px 20px;">
+              <div style="font-weight: 700; font-size: 15px; color: #17181A;">Ciblage &amp; trame</div>
+              <div style="display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; font-size: 13px; font-weight: 600;">
+                <div style="padding: 7px 16px; border-radius: 999px; background: #17181A; color: #FFFFFF;">Promo 2020 ✕</div>
+                <div style="padding: 7px 16px; border-radius: 999px; background: #17181A; color: #FFFFFF;">Master Management ✕</div>
+                <div style="padding: 7px 16px; border-radius: 999px; border: 1px solid #ECEAE7; color: #6E6F72;">+ BTS Communication</div>
+                <div style="padding: 7px 16px; border-radius: 999px; border: 1px solid #ECEAE7; color: #6E6F72;">+ filtre</div>
+              </div>
+              <div style="font-size: 13px; color: #6E6F72; font-weight: 500; margin-top: 12px;">Trame <strong style="color: #17181A;">« Premiers pas après le diplôme »</strong> · pondérée par la stratégie · <span style="color: #F1662B; font-weight: 700;">prévisualiser en me faisant interviewer →</span></div>
+            </div>
+            <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8px;">
+              <div style="height: 52px; border-radius: 999px; background: #F1662B; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700;">Lancer — 87 invitations · ≈ 43 €</div>
+              <div style="height: 46px; border-radius: 999px; border: 1px solid #ECEAE7; color: #17181A; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600;">Programmer pour mardi 9h — recommandé</div>
+            </div>
+          </div>
+          <div style="width: 330px; display: flex; flex-direction: column; gap: 12px;">
+            <div style="font-size: 11px; letter-spacing: 0.1em; color: #A3A4A7; font-weight: 700;">EN COURS</div>
+            <div style="border: 1px solid #ECEAE7; border-radius: 16px; padding: 16px;">
+              <div style="display: flex; align-items: baseline;"><div style="font-weight: 700; font-size: 14px; color: #17181A;">Promo 2019 · relance</div><div style="margin-left: auto; font-size: 12px; color: #A3A4A7; font-weight: 600;">J+12</div></div>
+              <div style="height: 8px; border-radius: 999px; background: #F5F5F4; margin-top: 12px;"><div style="width: 64%; height: 8px; border-radius: 999px; background: #F1662B;"></div></div>
+              <div style="display: flex; margin-top: 8px; font-size: 12px; font-weight: 600; color: #6E6F72;"><div>41 / 64 complétées</div><div style="margin-left: auto; color: #F1662B;">Relancer les 23</div></div>
+            </div>
+            <div style="border: 1px solid #ECEAE7; border-radius: 16px; padding: 16px;">
+              <div style="display: flex; align-items: baseline;"><div style="font-weight: 700; font-size: 14px; color: #17181A;">Alternants 2024</div><div style="margin-left: auto; font-size: 12px; color: #A3A4A7; font-weight: 600;">J+3</div></div>
+              <div style="height: 8px; border-radius: 999px; background: #F5F5F4; margin-top: 12px;"><div style="width: 22%; height: 8px; border-radius: 999px; background: #F1662B;"></div></div>
+              <div style="display: flex; margin-top: 8px; font-size: 12px; font-weight: 600; color: #6E6F72;"><div>7 / 31 complétées</div><div style="margin-left: auto; color: #A3A4A7;">relance auto J+7</div></div>
+            </div>
+            <div style="background: #F5F5F4; border-radius: 16px; padding: 16px; font-size: 13px; font-weight: 500; color: #6E6F72; line-height: 1.5;"><strong style="color: #17181A;">Bon à savoir.</strong> Les invitations du mardi matin complètent 2× mieux que celles du vendredi.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+</section>
+<section style="padding: 48px; display: flex; flex-direction: column; gap: 32px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #6B6862; letter-spacing: 0.08em;">TURN 1 — 3 PISTES D'IDENTITÉ · BRIQUE INTERVIEW &amp; AVATARS · ÉCOLE DÉMO : « ESM LYON » (ACCENT EXTRAIT #0E7C66)</div>
+  <div style="display: flex; flex-direction: column; gap: 56px;">
+    <div id="1a" style="display: flex; flex-direction: column; gap: 20px;">
+  <div style="display: flex; align-items: baseline; gap: 16px;">
+    <a href="#1a" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #2C241E; color: #FAF5EE; padding: 4px 10px; border-radius: 999px; text-decoration: none;">1a</a>
+    <div style="font-family: 'Instrument Serif', serif; font-size: 34px; color: #2C241E;">Piste A · « Braise » — chaleur éditoriale</div>
+    <div style="font-family: 'Instrument Sans', sans-serif; font-size: 14px; color: #6E6259;">Ton biographe assumé, serif incarnée, illustrations par la matière (couleur, pas de dessin). Emoji : selon le ton choisi.</div>
+  </div>
+  <div style="display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap;">
+    <div style="width: 360px; background: #FAF5EE; border: 1px solid #E7DDD2; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 24px; font-family: 'Instrument Sans', sans-serif;">
+      <div style="font-family: 'Instrument Serif', serif; font-size: 44px; line-height: 1.05; color: #2C241E;">Braise<span style="color: #B4552D;">.</span></div>
+      <div style="font-size: 14px; line-height: 1.5; color: #6E6259;">Papier crème, encre brune, une serif qui parle. Le chaleureux vient des neutres — la couleur de l'école reste l'unique voix vive côté interviewé.</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; color: #8D8177;">PALETTE — INTERVIEWÉ</div>
+        <div style="display: flex; gap: 8px;">
+          <div style="flex: 1; height: 56px; border-radius: 10px; background: #FAF5EE; border: 1px solid #E7DDD2;"></div>
+          <div style="flex: 1; height: 56px; border-radius: 10px; background: #F1E8DC;"></div>
+          <div style="flex: 1; height: 56px; border-radius: 10px; background: #2C241E;"></div>
+          <div style="flex: 1; height: 56px; border-radius: 10px; background: #0E7C66; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; color: #FAF5EE; font-size: 10px; font-weight: 600;">ÉCOLE</div>
+        </div>
+        <div style="display: flex; gap: 6px; align-items: center;">
+          <div style="font-size: 11px; color: #8D8177;">slot accent :</div>
+          <div style="width: 22px; height: 22px; border-radius: 6px; background: #8A1E2D;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 6px; background: #1D4ED8;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 6px; background: #C2570C;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 6px; background: #5B45E0;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 6px; background: #0E7C66; outline: 2px solid #2C241E; outline-offset: 2px;"></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; color: #8D8177;">PALETTE — STUDIO (FIXE)</div>
+        <div style="display: flex; gap: 8px;">
+          <div style="flex: 1; height: 40px; border-radius: 10px; background: #241D18;"></div>
+          <div style="flex: 1; height: 40px; border-radius: 10px; background: #B4552D;"></div>
+          <div style="flex: 1; height: 40px; border-radius: 10px; background: #F3EDE4;"></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid #E7DDD2; padding-top: 18px;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; color: #8D8177;">TYPOGRAPHIE</div>
+        <div style="font-family: 'Instrument Serif', serif; font-size: 28px; color: #2C241E;">Instrument Serif — titres, voix de Léa</div>
+        <div style="font-size: 15px; color: #2C241E;">Instrument Sans — interface, bulles, labels</div>
+        <div style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 18px; color: #B4552D;">« Pas tout à fait toi ? Affinons-le. »</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #E7DDD2; padding-top: 18px; font-size: 13px; color: #6E6259; line-height: 1.5;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; color: #8D8177;">PRINCIPES</div>
+        <div>Rayons 16 · ombres douces · citations en serif italique · Studio épuré, une métrique à la fois.</div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">ÉCRAN 7 — SESSION D'INTERVIEW (INTERVIEWÉ, THÈME ESM LYON)</div>
+  <div data-screen-label="1a Écran 7" style="width: 1180px; height: 760px; background: #FAF5EE; border-radius: 24px; box-shadow: 0 8px 40px rgba(44,36,30,0.14); font-family: 'Instrument Sans', sans-serif; display: flex; flex-direction: column; overflow: hidden;">
+    <div style="display: flex; align-items: center; gap: 16px; padding: 16px 28px; border-bottom: 1px solid #E7DDD2;">
+      <div style="width: 30px; height: 30px; border-radius: 9px; background: #0E7C66; color: #FAF5EE; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px;">EL</div>
+      <div style="font-size: 14px; color: #2C241E; font-weight: 600;">ESM Lyon · Interview avec Léa</div>
+      <div style="display: flex; gap: 8px; margin-left: auto; align-items: center;">
+        <div style="font-size: 12px; padding: 6px 12px; border-radius: 999px; background: #F1E8DC; color: #6E6259;">✓ Parcours</div>
+        <div style="font-size: 12px; padding: 6px 12px; border-radius: 999px; background: #0E7C66; color: #FAF5EE; font-weight: 600;">Premier emploi</div>
+        <div style="font-size: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #E7DDD2; color: #8D8177;">International</div>
+        <div style="font-size: 12px; padding: 6px 12px; border-radius: 999px; border: 1px solid #E7DDD2; color: #8D8177;">Conseils</div>
+        <div style="font-size: 13px; color: #6E6259; margin-left: 8px;">≈ 6 min restantes</div>
+      </div>
+    </div>
+    <div style="flex: 1; display: flex; min-height: 0;">
+      <div style="flex: 1.2; display: flex; flex-direction: column; padding: 28px 32px; gap: 18px;">
+        <div style="display: flex; flex-direction: column; gap: 6px; max-width: 420px;">
+          <div style="background: #FFFFFF; border: 1px solid #E7DDD2; border-radius: 16px 16px 16px 4px; padding: 12px 16px; font-family: 'Instrument Serif', serif; font-size: 19px; color: #2C241E;">Ton premier poste chez Ubisoft, donc.</div>
+          <div style="background: #FFFFFF; border: 1px solid #E7DDD2; border-radius: 4px 16px 16px 16px; padding: 12px 16px; font-family: 'Instrument Serif', serif; font-size: 19px; color: #2C241E;">Raconte-moi la semaine où tu as compris que tu étais au bon endroit.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px; max-width: 440px; align-self: flex-end; align-items: flex-end;">
+          <div style="background: #0E7C66; color: #FAF5EE; border-radius: 16px 16px 4px 16px; padding: 12px 16px; font-size: 15px; line-height: 1.5;">C'était pendant le rush de fin de prod. On m'a confié la loca FR alors que j'étais junior…</div>
+          <div style="font-size: 11px; color: #8D8177;">transcription en direct · 0:42</div>
+        </div>
+        <div style="margin-top: auto; display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; align-items: center; gap: 14px; background: #FFFFFF; border: 1px solid #E7DDD2; border-radius: 20px; padding: 16px 20px;">
+            <div style="width: 52px; height: 52px; border-radius: 999px; background: #0E7C66; display: flex; align-items: center; justify-content: center; gap: 3px;">
+              <div style="width: 3px; height: 12px; border-radius: 2px; background: #FAF5EE;"></div>
+              <div style="width: 3px; height: 24px; border-radius: 2px; background: #FAF5EE;"></div>
+              <div style="width: 3px; height: 16px; border-radius: 2px; background: #FAF5EE;"></div>
+              <div style="width: 3px; height: 28px; border-radius: 2px; background: #FAF5EE;"></div>
+              <div style="width: 3px; height: 10px; border-radius: 2px; background: #FAF5EE;"></div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <div style="font-weight: 600; font-size: 15px; color: #2C241E;">Léa t'écoute</div>
+              <div style="font-size: 12px; color: #8D8177;">prends ton temps — pause auto si on t'appelle</div>
+            </div>
+            <div style="margin-left: auto; display: flex; gap: 8px;">
+              <div style="font-size: 13px; padding: 9px 16px; border-radius: 999px; border: 1px solid #E7DDD2; color: #2C241E;">🔒 Garder privé</div>
+              <div style="font-size: 13px; padding: 9px 16px; border-radius: 999px; border: 1px solid #E7DDD2; color: #2C241E;">Passer</div>
+              <div style="font-size: 13px; padding: 9px 16px; border-radius: 999px; border: 1px solid #E7DDD2; color: #2C241E;">Reformule</div>
+              <div style="font-size: 13px; padding: 9px 16px; border-radius: 999px; background: #2C241E; color: #FAF5EE;">⌨ Écrire</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 380px; border-left: 1px solid #E7DDD2; background: #F5EDE1; padding: 24px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="font-family: 'Instrument Serif', serif; font-size: 22px; color: #2C241E;">Ton parcours se construit</div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="background: #FFFFFF; border-radius: 14px; padding: 12px 14px; display: flex; gap: 10px; align-items: center;">
+            <div style="width: 8px; height: 8px; border-radius: 999px; background: #0E7C66;"></div>
+            <div style="flex: 1;"><div style="font-size: 13px; font-weight: 600; color: #2C241E;">BTS Communication · 2016-2018</div><div style="font-size: 12px; color: #8D8177;">ESM Lyon</div></div>
+            <div style="font-size: 12px; color: #0E7C66;">✓</div>
+          </div>
+          <div style="background: #FFFFFF; border-radius: 14px; padding: 12px 14px; display: flex; gap: 10px; align-items: center;">
+            <div style="width: 8px; height: 8px; border-radius: 999px; background: #0E7C66;"></div>
+            <div style="flex: 1;"><div style="font-size: 13px; font-weight: 600; color: #2C241E;">Chargée de loca · Ubisoft</div><div style="font-size: 12px; color: #8D8177;">2018-2021 · en cours d'enrichissement…</div></div>
+            <div style="width: 14px; height: 14px; border-radius: 999px; border: 2px solid #B4552D; border-top-color: transparent;"></div>
+          </div>
+          <div style="border: 1px dashed #D8CBBA; border-radius: 14px; padding: 12px 14px; font-size: 12px; color: #A79A8C;">Montréal · à venir dans le thème « International »</div>
+        </div>
+        <div style="font-size: 11px; letter-spacing: 0.1em; color: #8D8177; margin-top: 8px;">CITATIONS RETENUES</div>
+        <div style="background: #FFFFFF; border-radius: 14px; padding: 14px;">
+          <div style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 16px; color: #2C241E; line-height: 1.4;">« On m'a fait confiance avant que je me fasse confiance. »</div>
+          <div style="display: flex; gap: 6px; margin-top: 10px;">
+            <div style="font-size: 11px; padding: 3px 10px; border-radius: 999px; background: #E3F0EC; color: #0E7C66; font-weight: 600;">Public</div>
+            <div style="font-size: 11px; padding: 3px 10px; border-radius: 999px; border: 1px solid #E7DDD2; color: #8D8177;">Réservé école</div>
+          </div>
+        </div>
+        <div style="background: #FFFFFF; border-radius: 14px; padding: 14px;">
+          <div style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 16px; color: #2C241E; line-height: 1.4;">« Le salaire junior à Lyon, personne ne t'en parle avant. »</div>
+          <div style="display: flex; gap: 6px; margin-top: 10px;">
+            <div style="font-size: 11px; padding: 3px 10px; border-radius: 999px; background: #F1E8DC; color: #6E6259; font-weight: 600;">🔒 Privé</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">ÉCRAN 13 — STUDIO · CAMPAGNES (IDENTITÉ FIXE)</div>
+  <div data-screen-label="1a Écran 13" style="width: 1180px; height: 760px; background: #F3EDE4; border-radius: 24px; box-shadow: 0 8px 40px rgba(44,36,30,0.14); font-family: 'Instrument Sans', sans-serif; display: flex; overflow: hidden;">
+    <div style="width: 200px; background: #241D18; color: #F3EDE4; padding: 24px 18px; display: flex; flex-direction: column; gap: 4px;">
+      <div style="font-family: 'Instrument Serif', serif; font-size: 24px; margin-bottom: 20px;">Braise<span style="color: #B4552D;">.</span> <span style="font-size: 12px; font-family: 'Instrument Sans', sans-serif; opacity: 0.6;">Studio</span></div>
+      <div style="font-size: 13px; padding: 9px 12px; border-radius: 10px; color: #B8ACA0;">Stratégie</div>
+      <div style="font-size: 13px; padding: 9px 12px; border-radius: 10px; color: #B8ACA0;">Trames</div>
+      <div style="font-size: 13px; padding: 9px 12px; border-radius: 10px; background: #B4552D; color: #FFF7EF; font-weight: 600;">Campagnes</div>
+      <div style="font-size: 13px; padding: 9px 12px; border-radius: 10px; color: #B8ACA0;">Revue <span style="background: #B4552D; color: #FFF; border-radius: 999px; padding: 1px 7px; font-size: 11px; margin-left: 4px;">4</span></div>
+      <div style="font-size: 13px; padding: 9px 12px; border-radius: 10px; color: #B8ACA0;">Formations</div>
+      <div style="margin-top: auto; font-size: 12px; color: #8D8177;">ESM Lyon · Studio</div>
+    </div>
+    <div style="flex: 1; padding: 28px 32px; display: flex; flex-direction: column; gap: 20px; min-width: 0;">
+      <div style="display: flex; align-items: baseline; gap: 12px;">
+        <div style="font-family: 'Instrument Serif', serif; font-size: 30px; color: #241D18;">Nouvelle campagne — Promo 2020</div>
+        <div style="font-size: 13px; color: #8D8177; margin-left: auto;">Brouillon enregistré</div>
+      </div>
+      <div style="display: flex; gap: 20px; flex: 1; min-height: 0;">
+        <div style="flex: 1.3; display: flex; flex-direction: column; gap: 16px;">
+          <div style="background: #FFFFFF; border-radius: 18px; padding: 20px;">
+            <div style="font-weight: 600; font-size: 15px; color: #241D18;">1 · Import — alumni_2020.csv <span style="color: #0E7C66; font-weight: 400; font-size: 13px;">· 92 lignes lues</span></div>
+            <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 14px;">
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 13px;"><div style="width: 130px; font-family: 'IBM Plex Mono', monospace; color: #6E6259;">mail_perso</div><div style="color: #B4552D;">→</div><div style="padding: 5px 12px; border-radius: 999px; background: #F6E9DE; color: #241D18; font-weight: 600;">Email ✓</div></div>
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 13px;"><div style="width: 130px; font-family: 'IBM Plex Mono', monospace; color: #6E6259;">prenom_nom</div><div style="color: #B4552D;">→</div><div style="padding: 5px 12px; border-radius: 999px; background: #F6E9DE; color: #241D18; font-weight: 600;">Nom complet ✓</div></div>
+              <div style="display: flex; align-items: center; gap: 10px; font-size: 13px;"><div style="width: 130px; font-family: 'IBM Plex Mono', monospace; color: #6E6259;">cursus</div><div style="color: #B4552D;">→</div><div style="padding: 5px 12px; border-radius: 999px; border: 1.5px dashed #B4552D; color: #B4552D; font-weight: 600;">Formation — à confirmer</div><div style="font-size: 12px; color: #8D8177;">3 alias inconnus</div></div>
+            </div>
+          </div>
+          <div style="background: #FFFFFF; border-radius: 18px; padding: 20px;">
+            <div style="font-weight: 600; font-size: 15px; color: #241D18;">2 · Ciblage</div>
+            <div style="display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap;">
+              <div style="font-size: 13px; padding: 7px 14px; border-radius: 999px; background: #241D18; color: #F3EDE4;">Promo 2020 ✓</div>
+              <div style="font-size: 13px; padding: 7px 14px; border-radius: 999px; background: #241D18; color: #F3EDE4;">Master Management ✓</div>
+              <div style="font-size: 13px; padding: 7px 14px; border-radius: 999px; border: 1px solid #D8CBBA; color: #6E6259;">BTS Communication</div>
+              <div style="font-size: 13px; padding: 7px 14px; border-radius: 999px; border: 1px solid #D8CBBA; color: #6E6259;">+ Ajouter un filtre</div>
+            </div>
+            <div style="font-size: 13px; color: #6E6259; margin-top: 12px;">Trame : <strong style="color: #241D18;">« Premiers pas après le diplôme »</strong> · pondérée par 3 axes stratégiques</div>
+          </div>
+          <div style="background: #241D18; border-radius: 18px; padding: 20px; display: flex; align-items: center; gap: 20px;">
+            <div><div style="font-family: 'Instrument Serif', serif; font-size: 26px; color: #F3EDE4;">87 invitations</div><div style="font-size: 13px; color: #B8ACA0;">estimation : ≈ 43 € · ≈ 26 avatars attendus (30 %)</div></div>
+            <div style="margin-left: auto; font-size: 14px; padding: 12px 24px; border-radius: 999px; background: #B4552D; color: #FFF7EF; font-weight: 600;">Lancer la campagne</div>
+          </div>
+        </div>
+        <div style="width: 340px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-size: 11px; letter-spacing: 0.1em; color: #8D8177;">CAMPAGNES EN COURS</div>
+          <div style="background: #FFFFFF; border-radius: 16px; padding: 16px;">
+            <div style="display: flex; align-items: baseline;"><div style="font-weight: 600; font-size: 14px; color: #241D18;">Promo 2019 · relance</div><div style="margin-left: auto; font-size: 12px; color: #8D8177;">J+12</div></div>
+            <div style="height: 8px; border-radius: 999px; background: #F1E8DC; margin-top: 12px;"><div style="width: 64%; height: 8px; border-radius: 999px; background: #B4552D;"></div></div>
+            <div style="display: flex; margin-top: 8px; font-size: 12px; color: #6E6259;"><div>41 / 64 complétées</div><div style="margin-left: auto; color: #B4552D; font-weight: 600;">Relancer les 23 →</div></div>
+          </div>
+          <div style="background: #FFFFFF; border-radius: 16px; padding: 16px;">
+            <div style="display: flex; align-items: baseline;"><div style="font-weight: 600; font-size: 14px; color: #241D18;">Alternants 2024</div><div style="margin-left: auto; font-size: 12px; color: #8D8177;">J+3</div></div>
+            <div style="height: 8px; border-radius: 999px; background: #F1E8DC; margin-top: 12px;"><div style="width: 22%; height: 8px; border-radius: 999px; background: #B4552D;"></div></div>
+            <div style="display: flex; margin-top: 8px; font-size: 12px; color: #6E6259;"><div>7 / 31 complétées</div><div style="margin-left: auto; color: #8D8177;">relance auto J+7</div></div>
+          </div>
+          <div style="background: #F6E9DE; border-radius: 16px; padding: 16px; font-size: 13px; color: #6E6259; line-height: 1.5;"><strong style="color: #241D18;">Conseil.</strong> Les invitations envoyées le mardi matin complètent 2× mieux que le vendredi.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+    <div id="1b" style="display: flex; flex-direction: column; gap: 20px;">
+  <div style="display: flex; align-items: baseline; gap: 16px;">
+    <a href="#1b" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #23409A; color: #FCFCFA; padding: 4px 10px; border-radius: 999px; text-decoration: none;">1b</a>
+    <div style="font-family: 'IBM Plex Sans', sans-serif; font-weight: 700; font-size: 30px; color: #1B1A17;">Piste B · « Archive » — sobriété documentaire</div>
+    <div style="font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; color: #6B6862;">Le témoignage comme document : hairlines, mono pour les données, zéro emoji. Studio dense.</div>
+  </div>
+  <div style="display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap;">
+    <div style="width: 360px; background: #FCFCFA; border: 1px solid #E4E2DC; border-radius: 8px; padding: 28px; display: flex; flex-direction: column; gap: 24px; font-family: 'IBM Plex Sans', sans-serif;">
+      <div style="font-weight: 700; font-size: 40px; line-height: 1.05; color: #1B1A17; letter-spacing: -0.02em;">Archive<span style="color: #23409A;">_</span></div>
+      <div style="font-size: 14px; line-height: 1.55; color: #6B6862;">Chaque parole est une pièce versée au dossier. La chaleur vient du soin — marges généreuses, hiérarchie nette — pas de la décoration. L'accent école est traité comme un tampon.</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #8B8880;">PALETTE — INTERVIEWÉ</div>
+        <div style="display: flex; gap: 8px;">
+          <div style="flex: 1; height: 56px; border-radius: 4px; background: #FCFCFA; border: 1px solid #E4E2DC;"></div>
+          <div style="flex: 1; height: 56px; border-radius: 4px; background: #F2F1ED;"></div>
+          <div style="flex: 1; height: 56px; border-radius: 4px; background: #1B1A17;"></div>
+          <div style="flex: 1; height: 56px; border-radius: 4px; background: #0E7C66; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; color: #FCFCFA; font-size: 10px; font-weight: 600;">ÉCOLE</div>
+        </div>
+        <div style="display: flex; gap: 6px; align-items: center;">
+          <div style="font-size: 11px; color: #8B8880;">slot accent :</div>
+          <div style="width: 22px; height: 22px; border-radius: 4px; background: #8A1E2D;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 4px; background: #1D4ED8;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 4px; background: #C2570C;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 4px; background: #5B45E0;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 4px; background: #0E7C66; outline: 2px solid #1B1A17; outline-offset: 2px;"></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #8B8880;">PALETTE — STUDIO (FIXE)</div>
+        <div style="display: flex; gap: 8px;">
+          <div style="flex: 1; height: 40px; border-radius: 4px; background: #FFFFFF; border: 1px solid #E4E2DC;"></div>
+          <div style="flex: 1; height: 40px; border-radius: 4px; background: #23409A;"></div>
+          <div style="flex: 1; height: 40px; border-radius: 4px; background: #1B1A17;"></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 1px solid #E4E2DC; padding-top: 18px;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #8B8880;">TYPOGRAPHIE</div>
+        <div style="font-weight: 700; font-size: 24px; color: #1B1A17; letter-spacing: -0.01em;">IBM Plex Sans — tout le texte</div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 14px; color: #23409A;">IBM Plex Mono — données, horodatage, statuts</div>
+        <div style="font-size: 15px; color: #1B1A17;">« Pas tout à fait toi ? Affinons-le. »</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; border-top: 1px solid #E4E2DC; padding-top: 18px; font-size: 13px; color: #6B6862; line-height: 1.5;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #8B8880;">PRINCIPES</div>
+        <div>Rayons 4-6 · pas d'ombre, des traits · tableaux assumés côté Studio · aucun emoji, aucune illustration.</div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">ÉCRAN 7 — SESSION D'INTERVIEW (INTERVIEWÉ, THÈME ESM LYON)</div>
+  <div data-screen-label="1b Écran 7" style="width: 1180px; height: 760px; background: #FCFCFA; border: 1px solid #DBD9D2; border-radius: 10px; font-family: 'IBM Plex Sans', sans-serif; display: flex; flex-direction: column; overflow: hidden;">
+    <div style="display: flex; align-items: center; gap: 16px; padding: 14px 28px; border-bottom: 1px solid #E4E2DC;">
+      <div style="width: 28px; height: 28px; border-radius: 4px; background: #0E7C66; color: #FCFCFA; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px;">EL</div>
+      <div style="font-size: 14px; color: #1B1A17; font-weight: 600;">ESM Lyon — Entretien nº 4 · Léa</div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8B8880;">REC 14:32</div>
+      <div style="display: flex; gap: 0; margin-left: auto; align-items: center; border: 1px solid #E4E2DC; border-radius: 6px; overflow: hidden;">
+        <div style="font-size: 12px; padding: 7px 14px; background: #F2F1ED; color: #6B6862; border-right: 1px solid #E4E2DC;">Parcours ✓</div>
+        <div style="font-size: 12px; padding: 7px 14px; background: #0E7C66; color: #FCFCFA; font-weight: 600; border-right: 1px solid #E4E2DC;">Premier emploi</div>
+        <div style="font-size: 12px; padding: 7px 14px; color: #A5A29A; border-right: 1px solid #E4E2DC;">International</div>
+        <div style="font-size: 12px; padding: 7px 14px; color: #A5A29A;">Conseils</div>
+      </div>
+      <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #6B6862;">−06:12</div>
+    </div>
+    <div style="flex: 1; display: flex; min-height: 0;">
+      <div style="flex: 1.2; display: flex; flex-direction: column; padding: 28px 32px; gap: 18px;">
+        <div style="display: flex; flex-direction: column; gap: 6px; max-width: 430px;">
+          <div style="background: #F2F1ED; border-radius: 6px; padding: 12px 16px; font-size: 15px; line-height: 1.5; color: #1B1A17;">Ton premier poste chez Ubisoft, donc.</div>
+          <div style="background: #F2F1ED; border-radius: 6px; padding: 12px 16px; font-size: 15px; line-height: 1.5; color: #1B1A17;">Raconte-moi la semaine où tu as compris que tu étais au bon endroit.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px; max-width: 440px; align-self: flex-end; align-items: flex-end;">
+          <div style="background: #FFFFFF; border: 1px solid #0E7C66; border-radius: 6px; padding: 12px 16px; font-size: 15px; line-height: 1.5; color: #1B1A17;">C'était pendant le rush de fin de prod. On m'a confié la loca FR alors que j'étais junior…</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8B8880;">TRANSCRIPTION · 00:42</div>
+        </div>
+        <div style="margin-top: auto; display: flex; align-items: center; gap: 16px; border: 1px solid #E4E2DC; border-radius: 8px; padding: 14px 18px; background: #FFFFFF;">
+          <div style="display: flex; align-items: center; gap: 2px; height: 32px;">
+            <div style="width: 3px; height: 10px; background: #0E7C66;"></div>
+            <div style="width: 3px; height: 22px; background: #0E7C66;"></div>
+            <div style="width: 3px; height: 14px; background: #0E7C66;"></div>
+            <div style="width: 3px; height: 28px; background: #0E7C66;"></div>
+            <div style="width: 3px; height: 18px; background: #0E7C66;"></div>
+            <div style="width: 3px; height: 8px; background: #0E7C66;"></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 1px;">
+            <div style="font-weight: 600; font-size: 14px; color: #1B1A17;">Écoute en cours</div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8B8880;">PAUSE AUTO SI PERTE DE FOCUS</div>
+          </div>
+          <div style="margin-left: auto; display: flex; gap: 8px;">
+            <div style="font-size: 13px; padding: 8px 14px; border-radius: 6px; border: 1px solid #DBD9D2; color: #1B1A17;">Garder privé</div>
+            <div style="font-size: 13px; padding: 8px 14px; border-radius: 6px; border: 1px solid #DBD9D2; color: #1B1A17;">Passer</div>
+            <div style="font-size: 13px; padding: 8px 14px; border-radius: 6px; border: 1px solid #DBD9D2; color: #1B1A17;">Reformule</div>
+            <div style="font-size: 13px; padding: 8px 14px; border-radius: 6px; background: #1B1A17; color: #FCFCFA;">Écrire</div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 380px; border-left: 1px solid #E4E2DC; padding: 24px; display: flex; flex-direction: column; gap: 14px; background: #FFFFFF;">
+        <div style="display: flex; align-items: baseline;">
+          <div style="font-weight: 700; font-size: 17px; color: #1B1A17;">Pièces versées</div>
+          <div style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8B8880;">2/4 THÈMES</div>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <div style="display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid #F0EEE8;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0E7C66; width: 42px;">2016</div>
+            <div style="flex: 1;"><div style="font-size: 13px; font-weight: 600; color: #1B1A17;">BTS Communication — ESM Lyon</div><div style="font-size: 12px; color: #8B8880;">validé par toi</div></div>
+            <div style="font-size: 12px; color: #0E7C66;">✓</div>
+          </div>
+          <div style="display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid #F0EEE8;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0E7C66; width: 42px;">2018</div>
+            <div style="flex: 1;"><div style="font-size: 13px; font-weight: 600; color: #1B1A17;">Chargée de loca — Ubisoft</div><div style="font-size: 12px; color: #23409A;">enrichissement en cours…</div></div>
+          </div>
+          <div style="display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px dashed #E4E2DC;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #C4C1B8; width: 42px;">2021</div>
+            <div style="flex: 1; font-size: 12px; color: #A5A29A;">Montréal — thème « International » à venir</div>
+          </div>
+        </div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #8B8880; margin-top: 6px;">CITATIONS RETENUES</div>
+        <div style="border: 1px solid #E4E2DC; border-left: 3px solid #0E7C66; border-radius: 4px; padding: 12px 14px;">
+          <div style="font-size: 14px; color: #1B1A17; line-height: 1.5;">« On m'a fait confiance avant que je me fasse confiance. »</div>
+          <div style="display: flex; gap: 8px; margin-top: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 10px;">
+            <div style="padding: 2px 8px; background: #0E7C66; color: #FCFCFA;">PUBLIC</div>
+            <div style="padding: 2px 8px; border: 1px solid #DBD9D2; color: #8B8880;">RÉSERVÉ ÉCOLE</div>
+          </div>
+        </div>
+        <div style="border: 1px solid #E4E2DC; border-left: 3px solid #8B8880; border-radius: 4px; padding: 12px 14px;">
+          <div style="font-size: 14px; color: #1B1A17; line-height: 1.5;">« Le salaire junior à Lyon, personne ne t'en parle avant. »</div>
+          <div style="display: flex; gap: 8px; margin-top: 8px; font-family: 'IBM Plex Mono', monospace; font-size: 10px;">
+            <div style="padding: 2px 8px; background: #1B1A17; color: #FCFCFA;">PRIVÉ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">ÉCRAN 13 — STUDIO · CAMPAGNES (IDENTITÉ FIXE, DENSE)</div>
+  <div data-screen-label="1b Écran 13" style="width: 1180px; height: 760px; background: #FFFFFF; border: 1px solid #DBD9D2; border-radius: 10px; font-family: 'IBM Plex Sans', sans-serif; display: flex; flex-direction: column; overflow: hidden;">
+    <div style="display: flex; align-items: center; gap: 24px; padding: 0 28px; height: 52px; border-bottom: 1px solid #E4E2DC;">
+      <div style="font-weight: 700; font-size: 16px; color: #1B1A17;">Archive<span style="color: #23409A;">_</span>Studio</div>
+      <div style="display: flex; gap: 20px; font-size: 13px; height: 100%; align-items: stretch;">
+        <div style="display: flex; align-items: center; color: #6B6862;">Stratégie</div>
+        <div style="display: flex; align-items: center; color: #6B6862;">Trames</div>
+        <div style="display: flex; align-items: center; color: #1B1A17; font-weight: 600; box-shadow: inset 0 -2px 0 #23409A;">Campagnes</div>
+        <div style="display: flex; align-items: center; gap: 6px; color: #6B6862;">Revue <span style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: #23409A; color: #FFF; padding: 1px 6px; border-radius: 3px;">4</span></div>
+        <div style="display: flex; align-items: center; color: #6B6862;">Formations</div>
+      </div>
+      <div style="margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #8B8880;">ESM LYON · ADMIN</div>
+    </div>
+    <div style="flex: 1; display: flex; min-height: 0;">
+      <div style="flex: 1.35; padding: 24px 28px; display: flex; flex-direction: column; gap: 16px; border-right: 1px solid #E4E2DC;">
+        <div style="display: flex; align-items: baseline; gap: 10px;">
+          <div style="font-weight: 700; font-size: 22px; color: #1B1A17; letter-spacing: -0.01em;">Nouvelle campagne — Promo 2020</div>
+          <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #8B8880; margin-left: auto;">BROUILLON · 16:04</div>
+        </div>
+        <div style="border: 1px solid #E4E2DC; border-radius: 6px;">
+          <div style="padding: 12px 16px; border-bottom: 1px solid #E4E2DC; display: flex; align-items: center; gap: 8px;"><div style="font-weight: 600; font-size: 14px; color: #1B1A17;">1 · Import CSV</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0E7C66;">alumni_2020.csv — 92 LIGNES</div></div>
+          <div style="display: grid; grid-template-columns: 140px 24px 1fr 1fr; gap: 8px 6px; padding: 14px 16px; align-items: center; font-size: 13px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; color: #6B6862;">mail_perso</div><div style="color: #23409A;">→</div><div style="font-weight: 600; color: #1B1A17;">Email</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0E7C66;">92/92 VALIDES</div>
+            <div style="font-family: 'IBM Plex Mono', monospace; color: #6B6862;">prenom_nom</div><div style="color: #23409A;">→</div><div style="font-weight: 600; color: #1B1A17;">Nom complet</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #0E7C66;">OK</div>
+            <div style="font-family: 'IBM Plex Mono', monospace; color: #6B6862;">cursus</div><div style="color: #23409A;">→</div><div style="font-weight: 600; color: #B45309;">Formation — à confirmer</div><div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #B45309;">3 ALIAS INCONNUS</div>
+          </div>
+        </div>
+        <div style="border: 1px solid #E4E2DC; border-radius: 6px; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px;">
+          <div style="font-weight: 600; font-size: 14px; color: #1B1A17;">2 · Ciblage &amp; trame</div>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap; font-size: 12px;">
+            <div style="padding: 6px 12px; border-radius: 4px; background: #1B1A17; color: #FCFCFA;">Promo 2020</div>
+            <div style="padding: 6px 12px; border-radius: 4px; background: #1B1A17; color: #FCFCFA;">Master Management</div>
+            <div style="padding: 6px 12px; border-radius: 4px; border: 1px solid #DBD9D2; color: #6B6862;">BTS Communication</div>
+            <div style="padding: 6px 12px; border-radius: 4px; border: 1px dashed #DBD9D2; color: #8B8880;">+ filtre</div>
+          </div>
+          <div style="font-size: 13px; color: #6B6862;">Trame « Premiers pas après le diplôme » · pondérée : <span style="color: #23409A;">insertion pro ×3 · international ×2 · alternance ×1</span></div>
+        </div>
+        <div style="margin-top: auto; border: 1px solid #1B1A17; border-radius: 6px; padding: 16px; display: flex; align-items: center; gap: 16px;">
+          <div>
+            <div style="font-weight: 700; font-size: 18px; color: #1B1A17;">87 invitations · est. 43,50 €</div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">≈ 26 AVATARS ATTENDUS (TAUX MÉDIAN 30 %) · RELANCE AUTO J+7</div>
+          </div>
+          <div style="margin-left: auto; font-size: 14px; padding: 11px 22px; border-radius: 6px; background: #23409A; color: #FFFFFF; font-weight: 600;">Lancer la campagne</div>
+        </div>
+      </div>
+      <div style="width: 400px; padding: 24px; display: flex; flex-direction: column; gap: 10px; background: #FCFCFA;">
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #8B8880;">SUIVI — 3 CAMPAGNES</div>
+        <div style="display: grid; grid-template-columns: 1fr auto auto; gap: 0; border: 1px solid #E4E2DC; border-radius: 6px; overflow: hidden; font-size: 12px;">
+          <div style="padding: 8px 12px; background: #F2F1ED; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #8B8880;">CAMPAGNE</div>
+          <div style="padding: 8px 12px; background: #F2F1ED; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #8B8880;">COMPLÉTION</div>
+          <div style="padding: 8px 12px; background: #F2F1ED; font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #8B8880;">ACTION</div>
+          <div style="padding: 10px 12px; border-top: 1px solid #E4E2DC; color: #1B1A17; font-weight: 600;">Promo 2019 · relance <span style="color: #8B8880; font-weight: 400;">J+12</span></div>
+          <div style="padding: 10px 12px; border-top: 1px solid #E4E2DC; font-family: 'IBM Plex Mono', monospace; color: #1B1A17;">41/64 · 64 %</div>
+          <div style="padding: 10px 12px; border-top: 1px solid #E4E2DC; color: #23409A; font-weight: 600;">Relancer 23</div>
+          <div style="padding: 10px 12px; border-top: 1px solid #E4E2DC; color: #1B1A17; font-weight: 600;">Alternants 2024 <span style="color: #8B8880; font-weight: 400;">J+3</span></div>
+          <div style="padding: 10px 12px; border-top: 1px solid #E4E2DC; font-family: 'IBM Plex Mono', monospace; color: #1B1A17;">7/31 · 22 %</div>
+          <div style="padding: 10px 12px; border-top: 1px solid #E4E2DC; color: #8B8880;">auto J+7</div>
+          <div style="padding: 10px 12px; border-top: 1px solid #E4E2DC; color: #1B1A17; font-weight: 600;">Promo 2020 <span style="color: #8B8880; font-weight: 400;">brouillon</span></div>
+          <div style="padding: 10px 12px; border-top: 1px solid #E4E2DC; font-family: 'IBM Plex Mono', monospace; color: #A5A29A;">—</div>
+          <div style="padding: 10px 12px; border-top: 1px solid #E4E2DC; color: #A5A29A;">—</div>
+        </div>
+        <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: #8B8880; margin-top: 10px;">COMPLÉTION PAR JOUR — PROMO 2019</div>
+        <div style="display: flex; align-items: flex-end; gap: 4px; height: 80px; border-bottom: 1px solid #E4E2DC; padding: 0 4px;">
+          <div style="flex: 1; height: 30%; background: #23409A;"></div>
+          <div style="flex: 1; height: 55%; background: #23409A;"></div>
+          <div style="flex: 1; height: 70%; background: #23409A;"></div>
+          <div style="flex: 1; height: 40%; background: #23409A;"></div>
+          <div style="flex: 1; height: 25%; background: #23409A;"></div>
+          <div style="flex: 1; height: 12%; background: #C9CFE4;"></div>
+          <div style="flex: 1; height: 8%; background: #C9CFE4;"></div>
+          <div style="flex: 1; height: 45%; background: #23409A;"></div>
+          <div style="flex: 1; height: 20%; background: #C9CFE4;"></div>
+          <div style="flex: 1; height: 10%; background: #C9CFE4;"></div>
+        </div>
+        <div style="font-size: 12px; color: #6B6862; line-height: 1.5; border: 1px solid #E4E2DC; border-radius: 6px; padding: 12px; background: #FFFFFF;"><span style="font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #23409A;">NOTE</span> — Les invitations du mardi matin complètent 2× mieux que celles du vendredi.</div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+    <div id="1c" style="display: flex; flex-direction: column; gap: 20px;">
+  <div style="display: flex; align-items: baseline; gap: 16px;">
+    <a href="#1c" style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #5B45E0; color: #F4F2EC; padding: 4px 10px; border-radius: 999px; text-decoration: none;">1c</a>
+    <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 30px; color: #16150F;">Piste C · « Écho » — pop tactile</div>
+    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 14px; color: #6B6862;">Tout est bouton : traits francs, pilules géantes, la couleur école en aplats. Emoji : oui, dosés par le ton.</div>
+  </div>
+  <div style="display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap;">
+    <div style="width: 360px; background: #F4F2EC; border: 2px solid #16150F; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 24px; font-family: 'Space Grotesk', sans-serif;">
+      <div style="font-weight: 700; font-size: 44px; line-height: 1; color: #16150F; letter-spacing: -0.03em;">écho<span style="color: #5B45E0;">))</span></div>
+      <div style="font-size: 14px; line-height: 1.5; color: #55524A;">Une interview doit donner envie d'appuyer. Les neutres restent doux ; l'école s'exprime en grands aplats et le trait noir tient tout ensemble, quelle que soit la couleur.</div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; color: #8B8880;">PALETTE — INTERVIEWÉ</div>
+        <div style="display: flex; gap: 8px;">
+          <div style="flex: 1; height: 56px; border-radius: 14px; background: #F4F2EC; border: 2px solid #16150F;"></div>
+          <div style="flex: 1; height: 56px; border-radius: 14px; background: #E9E4D8; border: 2px solid #16150F;"></div>
+          <div style="flex: 1; height: 56px; border-radius: 14px; background: #16150F;"></div>
+          <div style="flex: 1; height: 56px; border-radius: 14px; background: #0E7C66; border: 2px solid #16150F; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 6px; color: #F4F2EC; font-size: 10px; font-weight: 700;">ÉCOLE</div>
+        </div>
+        <div style="display: flex; gap: 6px; align-items: center;">
+          <div style="font-size: 11px; color: #8B8880;">slot accent :</div>
+          <div style="width: 22px; height: 22px; border-radius: 999px; background: #8A1E2D; border: 2px solid #16150F;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 999px; background: #1D4ED8; border: 2px solid #16150F;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 999px; background: #C2570C; border: 2px solid #16150F;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 999px; background: #5B45E0; border: 2px solid #16150F;"></div>
+          <div style="width: 22px; height: 22px; border-radius: 999px; background: #0E7C66; border: 2px solid #16150F; outline: 2px solid #16150F; outline-offset: 2px;"></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; color: #8B8880;">PALETTE — STUDIO (FIXE)</div>
+        <div style="display: flex; gap: 8px;">
+          <div style="flex: 1; height: 40px; border-radius: 14px; background: #16150F;"></div>
+          <div style="flex: 1; height: 40px; border-radius: 14px; background: #5B45E0; border: 2px solid #16150F;"></div>
+          <div style="flex: 1; height: 40px; border-radius: 14px; background: #FFFDF7; border: 2px solid #16150F;"></div>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; border-top: 2px solid #16150F; padding-top: 18px;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; color: #8B8880;">TYPOGRAPHIE</div>
+        <div style="font-weight: 700; font-size: 26px; color: #16150F; letter-spacing: -0.02em;">Space Grotesk — tout, du titre au bouton</div>
+        <div style="font-size: 15px; color: #16150F;">Graisse et taille font la hiérarchie, jamais une 2ᵉ famille.</div>
+        <div style="font-size: 16px; font-weight: 500; color: #5B45E0;">« Pas tout à fait toi ? Affinons-le. » ✌️</div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; border-top: 2px solid #16150F; padding-top: 18px; font-size: 13px; color: #55524A; line-height: 1.5;">
+        <div style="font-size: 11px; letter-spacing: 0.1em; color: #8B8880;">PRINCIPES</div>
+        <div>Trait 2px partout · rayons 14-999 · ombre franche décalée · états vocaux très animés · Studio dense mais joueur.</div>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">ÉCRAN 7 — SESSION D'INTERVIEW (INTERVIEWÉ, THÈME ESM LYON)</div>
+  <div data-screen-label="1c Écran 7" style="width: 1180px; height: 760px; background: #F4F2EC; border: 2px solid #16150F; border-radius: 28px; box-shadow: 8px 8px 0 #16150F; font-family: 'Space Grotesk', sans-serif; display: flex; flex-direction: column; overflow: hidden;">
+    <div style="display: flex; align-items: center; gap: 14px; padding: 16px 28px; border-bottom: 2px solid #16150F;">
+      <div style="width: 32px; height: 32px; border-radius: 999px; background: #0E7C66; border: 2px solid #16150F; color: #F4F2EC; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 12px;">EL</div>
+      <div style="font-size: 15px; color: #16150F; font-weight: 700;">ESM Lyon × Léa</div>
+      <div style="display: flex; gap: 8px; margin-left: auto; align-items: center;">
+        <div style="font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 999px; background: #16150F; color: #F4F2EC;">Parcours ✓</div>
+        <div style="font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 999px; background: #0E7C66; color: #F4F2EC; border: 2px solid #16150F;">Premier emploi</div>
+        <div style="font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 999px; border: 2px solid #16150F; color: #16150F;">International</div>
+        <div style="font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 999px; border: 2px solid #16150F; color: #16150F;">Conseils</div>
+        <div style="font-size: 13px; font-weight: 700; color: #16150F; margin-left: 8px;">⏱ ~6 min</div>
+      </div>
+    </div>
+    <div style="flex: 1; display: flex; min-height: 0;">
+      <div style="flex: 1.2; display: flex; flex-direction: column; padding: 28px 32px; gap: 18px;">
+        <div style="display: flex; flex-direction: column; gap: 8px; max-width: 430px;">
+          <div style="background: #FFFDF7; border: 2px solid #16150F; border-radius: 18px 18px 18px 4px; padding: 12px 18px; font-size: 16px; font-weight: 500; color: #16150F;">Ton premier poste chez Ubisoft, donc. 🎮</div>
+          <div style="background: #FFFDF7; border: 2px solid #16150F; border-radius: 4px 18px 18px 18px; padding: 12px 18px; font-size: 16px; font-weight: 500; color: #16150F;">Raconte-moi la semaine où tu as compris que tu étais au bon endroit.</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px; max-width: 440px; align-self: flex-end; align-items: flex-end;">
+          <div style="background: #0E7C66; border: 2px solid #16150F; color: #F4F2EC; border-radius: 18px 18px 4px 18px; padding: 12px 18px; font-size: 15px; line-height: 1.5;">C'était pendant le rush de fin de prod. On m'a confié la loca FR alors que j'étais junior…</div>
+          <div style="font-size: 12px; font-weight: 600; color: #8B8880;">✍️ transcrit en direct · 0:42</div>
+        </div>
+        <div style="margin-top: auto; display: flex; align-items: center; gap: 16px; background: #FFFDF7; border: 2px solid #16150F; border-radius: 999px; padding: 12px 16px; box-shadow: 4px 4px 0 #16150F;">
+          <div style="width: 56px; height: 56px; border-radius: 999px; background: #0E7C66; border: 2px solid #16150F; display: flex; align-items: center; justify-content: center; gap: 3px;">
+            <div style="width: 4px; height: 12px; border-radius: 3px; background: #F4F2EC;"></div>
+            <div style="width: 4px; height: 26px; border-radius: 3px; background: #F4F2EC;"></div>
+            <div style="width: 4px; height: 16px; border-radius: 3px; background: #F4F2EC;"></div>
+            <div style="width: 4px; height: 30px; border-radius: 3px; background: #F4F2EC;"></div>
+            <div style="width: 4px; height: 10px; border-radius: 3px; background: #F4F2EC;"></div>
+          </div>
+          <div style="display: flex; flex-direction: column;">
+            <div style="font-weight: 700; font-size: 16px; color: #16150F;">Je t'écoute 👂</div>
+            <div style="font-size: 12px; color: #8B8880; font-weight: 500;">pause auto si on t'appelle</div>
+          </div>
+          <div style="margin-left: auto; display: flex; gap: 8px;">
+            <div style="font-size: 13px; font-weight: 700; padding: 10px 16px; border-radius: 999px; border: 2px solid #16150F; color: #16150F; background: #F4F2EC;">🔒 Privé</div>
+            <div style="font-size: 13px; font-weight: 700; padding: 10px 16px; border-radius: 999px; border: 2px solid #16150F; color: #16150F; background: #F4F2EC;">Passer</div>
+            <div style="font-size: 13px; font-weight: 700; padding: 10px 16px; border-radius: 999px; border: 2px solid #16150F; color: #16150F; background: #F4F2EC;">Reformule</div>
+            <div style="font-size: 13px; font-weight: 700; padding: 10px 16px; border-radius: 999px; background: #16150F; color: #F4F2EC;">⌨ Écrire</div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 380px; border-left: 2px solid #16150F; background: #E9E4D8; padding: 24px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="font-weight: 700; font-size: 20px; color: #16150F; letter-spacing: -0.01em;">Ton histoire prend forme 🧱</div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="background: #FFFDF7; border: 2px solid #16150F; border-radius: 16px; padding: 12px 14px; display: flex; gap: 10px; align-items: center;">
+            <div style="flex: 1;"><div style="font-size: 13px; font-weight: 700; color: #16150F;">BTS Communication · 2016-2018</div><div style="font-size: 12px; color: #8B8880;">ESM Lyon</div></div>
+            <div style="width: 22px; height: 22px; border-radius: 999px; background: #0E7C66; border: 2px solid #16150F; color: #F4F2EC; display: flex; align-items: center; justify-content: center; font-size: 11px;">✓</div>
+          </div>
+          <div style="background: #FFFDF7; border: 2px solid #16150F; border-radius: 16px; padding: 12px 14px; display: flex; gap: 10px; align-items: center;">
+            <div style="flex: 1;"><div style="font-size: 13px; font-weight: 700; color: #16150F;">Chargée de loca · Ubisoft</div><div style="font-size: 12px; color: #5B45E0; font-weight: 600;">✨ ça s'enrichit en ce moment</div></div>
+          </div>
+          <div style="border: 2px dashed #B4AE9E; border-radius: 16px; padding: 12px 14px; font-size: 12px; font-weight: 600; color: #8B8880;">🇨🇦 Montréal — à venir dans « International »</div>
+        </div>
+        <div style="font-size: 11px; letter-spacing: 0.1em; color: #8B8880; font-weight: 700; margin-top: 8px;">CITATIONS RETENUES</div>
+        <div style="background: #FFFDF7; border: 2px solid #16150F; border-radius: 16px; padding: 14px; box-shadow: 4px 4px 0 #16150F;">
+          <div style="font-size: 15px; font-weight: 600; color: #16150F; line-height: 1.45;">« On m'a fait confiance avant que je me fasse confiance. »</div>
+          <div style="display: flex; gap: 6px; margin-top: 10px;">
+            <div style="font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: #0E7C66; color: #F4F2EC; border: 2px solid #16150F;">Public 🌍</div>
+            <div style="font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 999px; border: 2px solid #16150F; color: #16150F;">École</div>
+          </div>
+        </div>
+        <div style="background: #FFFDF7; border: 2px solid #16150F; border-radius: 16px; padding: 14px;">
+          <div style="font-size: 15px; font-weight: 600; color: #16150F; line-height: 1.45;">« Le salaire junior à Lyon, personne ne t'en parle avant. »</div>
+          <div style="display: flex; gap: 6px; margin-top: 10px;">
+            <div style="font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: #16150F; color: #F4F2EC;">🔒 Privé</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px;">
+  <div style="font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #6B6862;">ÉCRAN 13 — STUDIO · CAMPAGNES (IDENTITÉ FIXE)</div>
+  <div data-screen-label="1c Écran 13" style="width: 1180px; height: 760px; background: #FFFDF7; border: 2px solid #16150F; border-radius: 28px; box-shadow: 8px 8px 0 #16150F; font-family: 'Space Grotesk', sans-serif; display: flex; overflow: hidden;">
+    <div style="width: 200px; border-right: 2px solid #16150F; background: #F4F2EC; padding: 24px 16px; display: flex; flex-direction: column; gap: 6px;">
+      <div style="font-weight: 700; font-size: 24px; color: #16150F; letter-spacing: -0.03em; margin-bottom: 18px;">écho<span style="color: #5B45E0;">))</span> <span style="font-size: 12px; font-weight: 600; color: #8B8880;">studio</span></div>
+      <div style="font-size: 13px; font-weight: 600; padding: 9px 12px; border-radius: 999px; color: #55524A;">Stratégie</div>
+      <div style="font-size: 13px; font-weight: 600; padding: 9px 12px; border-radius: 999px; color: #55524A;">Trames</div>
+      <div style="font-size: 13px; font-weight: 700; padding: 9px 12px; border-radius: 999px; background: #5B45E0; color: #FFFDF7; border: 2px solid #16150F;">Campagnes</div>
+      <div style="font-size: 13px; font-weight: 600; padding: 9px 12px; border-radius: 999px; color: #55524A;">Revue <span style="background: #5B45E0; color: #FFF; border: 2px solid #16150F; border-radius: 999px; padding: 1px 7px; font-size: 11px; font-weight: 700; margin-left: 2px;">4</span></div>
+      <div style="font-size: 13px; font-weight: 600; padding: 9px 12px; border-radius: 999px; color: #55524A;">Formations</div>
+      <div style="margin-top: auto; font-size: 12px; font-weight: 600; color: #8B8880;">ESM Lyon 🏫</div>
+    </div>
+    <div style="flex: 1; padding: 26px 30px; display: flex; flex-direction: column; gap: 18px; min-width: 0;">
+      <div style="display: flex; align-items: baseline; gap: 12px;">
+        <div style="font-weight: 700; font-size: 28px; color: #16150F; letter-spacing: -0.02em;">Nouvelle campagne — Promo 2020 🚀</div>
+        <div style="font-size: 13px; font-weight: 600; color: #8B8880; margin-left: auto;">brouillon enregistré</div>
+      </div>
+      <div style="display: flex; gap: 18px; flex: 1; min-height: 0;">
+        <div style="flex: 1.3; display: flex; flex-direction: column; gap: 14px;">
+          <div style="background: #F4F2EC; border: 2px solid #16150F; border-radius: 20px; padding: 18px;">
+            <div style="font-weight: 700; font-size: 15px; color: #16150F;">1 · Import — alumni_2020.csv <span style="font-weight: 600; font-size: 13px; color: #0E7C66;">· 92 lignes ✓</span></div>
+            <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 12px; font-size: 13px;">
+              <div style="display: flex; align-items: center; gap: 10px;"><div style="width: 120px; font-weight: 600; color: #55524A;">mail_perso</div><div style="font-weight: 700; color: #5B45E0;">→</div><div style="padding: 5px 14px; border-radius: 999px; background: #16150F; color: #FFFDF7; font-weight: 700;">Email ✓</div></div>
+              <div style="display: flex; align-items: center; gap: 10px;"><div style="width: 120px; font-weight: 600; color: #55524A;">prenom_nom</div><div style="font-weight: 700; color: #5B45E0;">→</div><div style="padding: 5px 14px; border-radius: 999px; background: #16150F; color: #FFFDF7; font-weight: 700;">Nom complet ✓</div></div>
+              <div style="display: flex; align-items: center; gap: 10px;"><div style="width: 120px; font-weight: 600; color: #55524A;">cursus</div><div style="font-weight: 700; color: #5B45E0;">→</div><div style="padding: 5px 14px; border-radius: 999px; border: 2px dashed #5B45E0; color: #5B45E0; font-weight: 700;">Formation ?</div><div style="font-size: 12px; font-weight: 600; color: #8B8880;">3 alias inconnus</div></div>
+            </div>
+          </div>
+          <div style="background: #F4F2EC; border: 2px solid #16150F; border-radius: 20px; padding: 18px;">
+            <div style="font-weight: 700; font-size: 15px; color: #16150F;">2 · Qui on invite ?</div>
+            <div style="display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; font-size: 13px;">
+              <div style="font-weight: 700; padding: 7px 16px; border-radius: 999px; background: #5B45E0; color: #FFFDF7; border: 2px solid #16150F;">Promo 2020 ✓</div>
+              <div style="font-weight: 700; padding: 7px 16px; border-radius: 999px; background: #5B45E0; color: #FFFDF7; border: 2px solid #16150F;">Master Management ✓</div>
+              <div style="font-weight: 600; padding: 7px 16px; border-radius: 999px; border: 2px solid #16150F; color: #16150F;">BTS Communication</div>
+              <div style="font-weight: 600; padding: 7px 16px; border-radius: 999px; border: 2px dashed #B4AE9E; color: #8B8880;">+ filtre</div>
+            </div>
+            <div style="font-size: 13px; font-weight: 500; color: #55524A; margin-top: 12px;">Trame : <strong>« Premiers pas après le diplôme »</strong> · pondérée par 3 axes 🎯</div>
+          </div>
+          <div style="margin-top: auto; background: #16150F; border-radius: 20px; padding: 18px 22px; display: flex; align-items: center; gap: 20px;">
+            <div><div style="font-weight: 700; font-size: 24px; color: #FFFDF7; letter-spacing: -0.01em;">87 invitations ✉️</div><div style="font-size: 13px; color: #B4AE9E; font-weight: 500;">≈ 43 € · ≈ 26 avatars attendus (30 %)</div></div>
+            <div style="margin-left: auto; font-size: 15px; font-weight: 700; padding: 12px 26px; border-radius: 999px; background: #5B45E0; color: #FFFDF7; border: 2px solid #FFFDF7;">C'est parti →</div>
+          </div>
+        </div>
+        <div style="width: 330px; display: flex; flex-direction: column; gap: 12px;">
+          <div style="font-size: 11px; letter-spacing: 0.1em; font-weight: 700; color: #8B8880;">EN COURS</div>
+          <div style="background: #F4F2EC; border: 2px solid #16150F; border-radius: 20px; padding: 16px;">
+            <div style="display: flex; align-items: baseline;"><div style="font-weight: 700; font-size: 14px; color: #16150F;">Promo 2019 · relance</div><div style="margin-left: auto; font-size: 12px; font-weight: 600; color: #8B8880;">J+12</div></div>
+            <div style="height: 14px; border-radius: 999px; background: #FFFDF7; border: 2px solid #16150F; margin-top: 12px; overflow: hidden;"><div style="width: 64%; height: 100%; background: #5B45E0;"></div></div>
+            <div style="display: flex; margin-top: 8px; font-size: 12px; font-weight: 600; color: #55524A;"><div>41 / 64 🎉</div><div style="margin-left: auto; color: #5B45E0;">Relancer les 23 →</div></div>
+          </div>
+          <div style="background: #F4F2EC; border: 2px solid #16150F; border-radius: 20px; padding: 16px;">
+            <div style="display: flex; align-items: baseline;"><div style="font-weight: 700; font-size: 14px; color: #16150F;">Alternants 2024</div><div style="margin-left: auto; font-size: 12px; font-weight: 600; color: #8B8880;">J+3</div></div>
+            <div style="height: 14px; border-radius: 999px; background: #FFFDF7; border: 2px solid #16150F; margin-top: 12px; overflow: hidden;"><div style="width: 22%; height: 100%; background: #5B45E0;"></div></div>
+            <div style="display: flex; margin-top: 8px; font-size: 12px; font-weight: 600; color: #55524A;"><div>7 / 31</div><div style="margin-left: auto; color: #8B8880;">relance auto J+7</div></div>
+          </div>
+          <div style="background: #5B45E0; border: 2px solid #16150F; border-radius: 20px; padding: 16px; font-size: 13px; font-weight: 500; color: #FFFDF7; line-height: 1.5;">💡 <strong>Le mardi matin gagne.</strong> Les invitations du mardi complètent 2× mieux que le vendredi.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</section>
+</x-dc>
+</body>
+</html>

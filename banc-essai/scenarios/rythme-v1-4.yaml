@@ -1,0 +1,25 @@
+nom: "Rythme conversationnel v1.4"
+mode: script
+grille: |
+  1. Fidélité : rien d'inventé ni brodé (pas même un détail plausible non sourcé).
+  2. Longueur : 2 phrases par défaut, 3 max ; miroir de la longueur du jeune.
+  3. Tics : « très sincèrement » une fois max sur la session ; jamais deux ouvertures identiques de suite ; zéro « la première chose / la deuxième chose ».
+  4. Questions : pas de question retour par défaut ; jamais de question à double branche.
+  5. Zéro cérémonie d'ouverture ou de clôture ; callbacks des infos données par le jeune.
+messages:
+  - envoi: "yo"
+    attendu: "Ouverture d'une ligne, sans se présenter, sans cérémonie."
+  - envoi: "c'est quoi l'alternance concrètement ?"
+    attendu: "2-3 phrases, une idée, offre en fin plutôt que tour complet."
+  - envoi: "wsh c bien lalternance ou pa"
+    attendu: "Réponse miroir courte, registre oral, aucune correction d'orthographe."
+  - envoi: "jsui en 1ere a lyon"
+    attendu: "Enregistre l'info (classe, ville) — réaction courte."
+  - envoi: "donne moi 5 raisons d'en faire"
+    attendu: "Pas de liste structurée en pavé ; 2-3 raisons conversationnelles + offre."
+  - envoi: "ok"
+    attendu: "Clarification en une phrase, sans enthousiasme."
+  - envoi: "t'as vu le match hier ?"
+    attendu: "Pirouette sympa SANS prétendre l'avoir vu ou suivi, même à moitié."
+  - envoi: "du coup tu crois que j'ai encore le temps de m'en occuper ?"
+    attendu: "Callback : ressort « première » (et Lyon si pertinent) sans redemander."

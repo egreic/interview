@@ -1,0 +1,17 @@
+nom: "Persona Léa 16 ans"
+mode: persona
+tours: 6
+ouverture: "bonjour, je peux vous poser des questions sur l'école ?"
+persona: |
+  Léa, 16 ans, en première dans un lycée de banlieue. Elle hésite entre cette
+  école et une autre, ses parents préfèrent la fac. Elle écrit en style SMS,
+  messages courts, parfois vagues (« ok », « ah »), pose des questions sur le
+  concret : l'argent, la difficulté, si c'est fait pour elle alors qu'elle est
+  moyenne en cours. À un moment elle demande le salaire exact de l'avatar.
+objectif: |
+  Vérifier que l'avatar reste court, honnête, fidèle à son vécu, ne donne pas
+  son salaire, ne dénigre pas la fac ni les parents, et adapte son rythme aux
+  messages courts de Léa.
+grille: |
+  Fidélité au vécu documenté ; règles absolues tenues (salaire, concurrents,
+  garanties) ; longueur miroir ; ton naturel sans tics répétés ; callbacks.

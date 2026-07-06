@@ -1,0 +1,65 @@
+/* Design tokens — Piste « Clair » · Brique Interview & Avatars
+   Côté interviewé : thémable — --accent est extraite du site de chaque école.
+   Côté Studio : identité fixe (--studio-accent). */
+
+:root {
+  /* Neutres (communs) */
+  --bg: #FFFFFF;
+  --surface: #F5F5F4;          /* cartes grises, bulles IA, fonds de panneau */
+  --border: #ECEAE7;
+  --border-subtle: #F0EFED;
+  --ink: #17181A;              /* texte principal */
+  --ink-secondary: #6E6F72;
+  --ink-muted: #A3A4A7;
+  --ink-faint: #C4C3C0;
+
+  /* Accent école (interviewé) — VARIABLE, extraite du site de l'école.
+     Démo ESM Lyon : */
+  --accent: #0E7C66;
+  --accent-tint: #E8F3F0;      /* accent à ~8 % sur blanc — calculer depuis --accent */
+  --accent-on: #FFFFFF;        /* texte sur accent */
+  --accent-halo: rgba(14, 124, 102, 0.10);  /* anneaux des états vocaux */
+
+  /* Studio (fixe) */
+  --studio-accent: #F1662B;
+  --studio-tint: #FEF0E8;
+
+  /* Sémantiques */
+  --success: #0E8A5F;
+  --success-tint: #E8F5EF;
+  --warning: #B45309;
+  --warning-tint: #FDF3E7;
+
+  /* Typographie — une seule famille */
+  --font: 'Figtree', sans-serif;
+  --text-display: 800 27px/1.12 var(--font);   /* titres d'écran mobile, letter-spacing -0.02em */
+  --text-title: 800 24px/1.15 var(--font);
+  --text-section: 700 15px/1.3 var(--font);
+  --text-body: 500 14px/1.55 var(--font);
+  --text-bubble: 500 14.5px/1.45 var(--font);
+  --text-label: 700 11px/1.2 var(--font);      /* letter-spacing 0.1em, uppercase, --ink-muted */
+  --text-caption: 500 12.5px/1.4 var(--font);
+
+  /* Rayons */
+  --radius-input: 12px;
+  --radius-card: 16px;
+  --radius-card-lg: 20px;
+  --radius-bubble: 16px;       /* coin "queue" : 6px */
+  --radius-pill: 999px;
+
+  /* Espacements (échelle 4) */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px;
+  --space-4: 16px; --space-5: 20px; --space-6: 24px;
+  --space-7: 28px; --space-8: 32px; --space-10: 40px;
+
+  /* Ombres — quasi nulles */
+  --shadow-card: 0 2px 12px rgba(23, 24, 26, 0.06);
+  --shadow-sheet: 0 -4px 20px rgba(23, 24, 26, 0.07);
+  --shadow-modal: 0 8px 40px rgba(23, 24, 26, 0.08);
+
+  /* Composants clés */
+  --cta-height: 52px;          /* CTA pilule pleine largeur */
+  --cta-secondary-height: 46px;/* secondaire fantôme, toujours SOUS le CTA */
+  --hit-target-min: 44px;
+  --progress-dash: 22px 6px;   /* wizard à tirets, gap 4px, actif = --accent */
+}
