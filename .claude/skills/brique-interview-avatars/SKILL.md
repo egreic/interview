@@ -60,7 +60,17 @@ Se lit avec `03-cahier-des-charges-technique.md` (le QUOI). Ce skill est le COMM
 
 ## Design system
 
-[À FIGER après le choix de piste Claude Design : coller ici les tokens exportés — palette avec slot couleur-école, typos, espacements, rayons — et les règles d'usage. Jusque-là : aucun style en dur, tout en variables.]
+Piste retenue : **« Clair »**. Sources : `design/rendus/tokens.css` et `design/rendus/tokens.json` (règles d'usage complètes dans `design/rendus/README.md`, référence visuelle `design/rendus/Pistes Identité.dc.html`). Aucun style en dur : tout passe par ces variables.
+
+- **Neutres** : `--bg #FFFFFF` · `--surface #F5F5F4` (cartes grises, bulles IA, panneaux) · `--border #ECEAE7` · `--border-subtle #F0EFED` · `--ink #17181A` · `--ink-secondary #6E6F72` · `--ink-muted #A3A4A7` · `--ink-faint #C4C3C0`.
+- **Accent école (côté interviewé) — VARIABLE par tenant**, extraite du site de chaque école (démo ESM Lyon `#0E7C66`) : `--accent`, `--accent-on #FFFFFF`, `--accent-tint` (~8 % sur blanc) et `--accent-halo` (10 %) — tint et halo se DÉRIVENT de l'accent (ex. `color-mix(in oklch, var(--accent) 8%, white)`), jamais figés.
+- **Studio (identité fixe)** : `--studio-accent #F1662B` · `--studio-tint #FEF0E8`.
+- **Sémantiques** : `--success #0E8A5F` / `--success-tint #E8F5EF` · `--warning #B45309` / `--warning-tint #FDF3E7`.
+- **Typographie** : une seule famille, **Figtree** (Google Fonts, graisses 400–800). `display` 800 27px/1.12 (letter-spacing -0.02em) · `title` 800 24px/1.15 (-0.02em) · `section` 700 15px · `body` 500 14px/1.55 · `bubble` 500 14.5px/1.45 · `label` 700 11px (0.1em, uppercase) · `caption` 500 12.5px.
+- **Rayons** : input 12 · card 16 · card-lg 20 · bubble 16 (coin « queue » 6) · pill 999.
+- **Espacements** (échelle de 4) : 4, 8, 12, 16, 20, 24, 28, 32, 40.
+- **Ombres quasi nulles** : card `0 2px 12px rgba(23,24,26,.06)` · sheet `0 -4px 20px rgba(23,24,26,.07)` · modal `0 8px 40px rgba(23,24,26,.08)`.
+- **Composants clés** : CTA pilule pleine largeur 52px (fond accent), secondaire fantôme 46px toujours DESSOUS · hit targets ≥ 44px · wizard à tirets 22×6px, gap 4, actif = accent · icônes en pastilles teintées (fond tint, glyphe accent) · **zéro emoji** — la chaleur vient de la copie.
 
 ## Fichiers de référence
 
