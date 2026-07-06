@@ -33,11 +33,15 @@ Se lit avec `03-cahier-des-charges-technique.md` (le QUOI). Ce skill est le COMM
 
 ## Conventions
 
-- **Préséance** : le scaffold Studizz (`studizz-project-scaffold`, disponible dans `.claude/skills/` avec `studizz-auth-integration`, `studizz-api-amqp-client`, `studizz-api-mailer-client`, `openapi-controller-doc`) fait autorité sur l'outillage et les conventions d'infrastructure maison ; le cahier des charges et ce skill font autorité sur l'architecture du domaine (briques, contrats, multi-tenant, immutabilité) ; tout conflit est remonté à l'humain, jamais arbitré silencieusement.
+- **Préséance** : le scaffold Studizz (`studizz-project-scaffold`, disponible dans `.claude/skills/` avec `studizz-auth-integration`, `studizz-api-amqp-client`, `studizz-api-mailer-client`, `openapi-controller-doc`) fait autorité sur l'outillage et les conventions d'infrastructure maison ; le cahier des charges et ce skill font autorité sur l'architecture du domaine (briques, contrats, multi-tenant, immutabilité) ; tout conflit est remonté à l'humain, jamais arbitré silencieusement. Arbitrages scaffold/CDC actés dans le §0 du CDC — le dépôt est la source de vérité.
+- **Arborescence (hybride, actée)** : racine `backend/` (Symfony), `frontend/interviewee/`, `frontend/studio/`, `workers/` (Python pika, transformateurs), `voice-gateway/` (FastAPI), `deploy/`. `scaffold.py` ne s'exécute JAMAIS sur ce dépôt : il sert de spécification d'outillage (compose de dev, Makefile, scripts de déploiement, systemd).
+- **Prod** : modèle maison VPS OVH (Apache + systemd, déploiement git/scripts) ; vhost WebSocket `mod_proxy_wstunnel` à timeouts longs pour la passerelle vocale (test de tenue 20 min au J4).
+- **Auth double** : magic links pour interviewés/alumni (non négociable, échangeables contre un JWT à scope limité) ; `studizz-auth` pour admins Studio et comptes techniques (skill `studizz-auth-integration`).
+- **Async** : RabbitMQ — le backend publie uniquement via l'interface `JobDispatcher` (implémentation `studizz-api-amqp-client`, stub en dev) ; workers pika dans `workers/` ; jamais de Messenger ; gateway AMQP jamais exposée publiquement (checklist de déploiement).
 - **Langue** : code, identifiants et commits en anglais ; le vocabulaire métier français est mappé une fois (`docs/ubiquitous-language.md`) : Trame→InterviewTemplate, Enregistrement canonique→CanonicalRecord, Profil vivant→LivingProfile, Atelier→AvatarWorkshop, Banc d'essai→TestBench, Fiche persona→PersonaSheet.
-- **Symfony** : `src/Module/<Brick>/{Controller,Service,Document,Event,Adapter}` ; DTO d'entrée validés ; pas de logique en contrôleur ; contrôleurs REST maison, OpenAPI mis à jour dans la même PR (la CI compare).
+- **Symfony** : `backend/src/Module/<Brick>/{Controller,Service,Document,Event,Adapter}` ; DTO d'entrée validés ; pas de logique en contrôleur ; contrôleurs REST maison, doc OpenAPI code-first dans les contrôleurs (skill `openapi-controller-doc`), spec dumpée commitée dans la même PR, CI en échec si divergence.
 - **Python (passerelle)** : FastAPI, typé, sans état, aucune dépendance à Mongo — elle ne parle qu'à l'API Symfony.
-- **React** : espaces `apps/interviewee` et `apps/studio`, composants du design system uniquement (tokens ci-dessous), pas de style ad hoc.
+- **React** : espaces `frontend/interviewee` et `frontend/studio`, composants du design system uniquement (tokens ci-dessous), pas de style ad hoc.
 - **Tests** : chaque jalon du CDC a son critère vérifiable — l'écrire en test AVANT de coder le jalon (goal-driven). Fixtures = seeds « École Démo » + cas Sacha anonymisé.
 - **Prompts** : dans `/prompts`, un fichier = une responsabilité, front-matter `version:` ; jamais de prompt inline dans le code.
 
@@ -45,7 +49,7 @@ Se lit avec `03-cahier-des-charges-technique.md` (le QUOI). Ce skill est le COMM
 
 **Nouvel endpoint** : DTO validé → garde tenant → service de brique → OpenAPI → test d'isolation + test métier → événement si transition d'état.
 **Nouvelle brique/module** : contrat d'interface d'abord → stub → documents ODM avec tenantId → événements → entrée dans ce skill si nouveau piège découvert.
-**Nouveau transformateur** : contrat entrée/sortie → version → job Messenger idempotent → re-run masse testé → routage modèle justifié.
+**Nouveau transformateur** : contrat entrée/sortie → version → worker pika idempotent (publication via `JobDispatcher`) → re-run masse testé → routage modèle justifié.
 **Nouveau prompt ou modification** : scénario de non-régression au banc → run → verdict positif exigé → bump de version → recompilation des avatars si socle.
 **Nouvel écran** : tokens du design system uniquement → une action principale → suggestion→tap si décision → état mobile → états vides/erreur/chargement.
 **Toucher aux données personnelles** : vérifier consentement requis, propagation de révocation, cascade de suppression, visibilité (public/réservé/privé) respectée jusqu'au prompt.

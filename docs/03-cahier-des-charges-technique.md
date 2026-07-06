@@ -1,20 +1,30 @@
 # 03 · Cahier des charges technique — Brique Interview & Avatars (V1)
 
-Document de référence pour Claude Code. À lire avec le skill de développement (04) chargé. Les points « À CONFIRMER CTO » sont des hypothèses par défaut, remplaçables sans refonte.
+Document de référence pour Claude Code. À lire avec le skill de développement (04) chargé. Ce dépôt est la source de vérité du CDC ; les points restants « À CONFIRMER CTO » sont des hypothèses par défaut, remplaçables sans refonte.
 
-## 0. À confirmer par le CTO (hypothèses par défaut adoptées)
+## 0. Décisions actées (arbitrages scaffold Studizz / CDC) et hypothèses restantes
 
-1. **Infra** : hypothèse conteneurs Docker + reverse proxy compatible WebSocket (timeouts longs). 2. **Multi-tenant existant** : hypothèse isolation par champ `tenantId` et référentiel écoles/utilisateurs à réutiliser si présent — sinon la brique crée le sien. 3. **Fournisseurs** : LLM via adaptateur (Claude par défaut) ; STT/TTS via adaptateurs (fournisseurs à brancher) ; API de recherche/récupération de profils LinkedIn = le fournisseur existant de l'équipe (2 méthodes : `search(nom, prenom, indices)` et `fetch(profil_id)`). 4. **Emails** : hypothèse service transactionnel existant, expéditeur plateforme + reply-to école. 5. **Stockage** : hypothèse objet S3-compatible pour l'audio. 6. **Versions** : PHP 8.3 / Symfony 6.4 LTS, Node non requis, Python 3.11+, MongoDB 7, React 18 + Vite. 7. **Jobs IA** : Symfony Messenger par défaut ; bascule possible vers workers Python si l'équipe préfère (le contrat des transformateurs est agnostique).
+**Décisions actées :**
+
+1. **Infra** : dev via docker-compose (modèle scaffold Studizz) ; prod = modèle maison VPS OVH (Ubuntu + Apache + PHP, déploiement git + scripts, workers sous systemd). Exigence : vhost compatible WebSocket (`mod_proxy_wstunnel`, timeouts longs) pour la passerelle vocale — test de tenue 20 min au Jalon 4.
+2. **Multi-tenant et utilisateurs** : isolation par champ `tenantId` (invariant). Identité des admins Studio et des comptes techniques déléguée au service central `studizz-auth` (skill `studizz-auth-integration`). Référentiel écoles : hypothèse inchangée — réutiliser l'existant si présent, sinon la brique crée le sien.
+4. **Emails** : service transactionnel maison `studizz-api-mailer` (skill `studizz-api-mailer-client`) — `POST /mail`, URL via `STUDIZZ_API_MAILER_URL`, expéditeur plateforme + reply-to école portés par le payload.
+6. **Versions pincées** : PHP 8.3, Symfony 6.4 LTS, MongoDB 7, Python 3.11, React 18 + Vite, Node non requis côté serveur.
+7. **Jobs IA** : RabbitMQ maison — workers Python pika pour les transformateurs ; le backend publie via une interface `JobDispatcher` implémentée sur la gateway `studizz-api-amqp` (skill `studizz-api-amqp-client`). Symfony Messenger abandonné. La gateway AMQP n'est jamais exposée publiquement (contrôle en checklist de déploiement).
+
+**Hypothèses restantes (à confirmer CTO) :**
+
+3. **Fournisseurs** : LLM via adaptateur (Claude par défaut) ; STT/TTS via adaptateurs (fournisseurs à brancher) ; API de recherche/récupération de profils LinkedIn = le fournisseur existant de l'équipe (2 méthodes : `search(nom, prenom, indices)` et `fetch(profil_id)`). 5. **Stockage** : hypothèse objet S3-compatible pour l'audio.
 
 ## 1. Stack et principes
 
-- **Backend** : Symfony, contrôleurs REST maison (pas d'API Platform), contrat **OpenAPI comme source de vérité** (`/openapi.yaml` maintenu), MongoDB via Doctrine ODM, Symfony Messenger pour l'asynchrone.
+- **Backend** : Symfony, contrôleurs REST maison (pas d'API Platform), **OpenAPI code-first** : doc dans les contrôleurs (skill `openapi-controller-doc`), spec dumpée (`nelmio:apidoc:dump`) commitée dans le dépôt, CI en échec si divergence. MongoDB via Doctrine ODM ; asynchrone via RabbitMQ — publication par l'interface `JobDispatcher` (gateway `studizz-api-amqp`), consommation par les workers Python pika.
 - **Front** : React SPA (Vite), deux espaces (interviewé / Studio), design tokens issus du dossier Design (04-skill, section à figer).
-- **Passerelle vocale** : service Python FastAPI (ASGI), WebSocket, sans état durable, un conteneur. Aucune logique métier : elle pipe l'audio et appelle l'API Symfony.
+- **Passerelle vocale** : service Python FastAPI (ASGI), WebSocket, sans état durable (conteneur en dev, service systemd derrière le vhost Apache `mod_proxy_wstunnel` en prod). Aucune logique métier : elle pipe l'audio et appelle l'API Symfony.
 - **Monolithe modulaire** : une brique = un module Symfony (`src/Module/<Brique>/`) avec contrôleurs, services, documents ODM, événements — communication inter-briques UNIQUEMENT par interfaces de service et événements. Séparable plus tard sans réécriture.
 - **Multi-tenant day one** : `tenantId` sur chaque document ; garde d'accès systématique (voir skill).
 - **Adaptateurs partout** : LLM, STT, TTS, LinkedIn, email, stockage, contexte école — une interface + implémentations, config par env.
-- **Auth** : magic links (interviewés et admins), tokens signés à TTL, renouvelables ; espace personnel permanent via le même mécanisme.
+- **Auth double** : magic links pour les interviewés/alumni (non négociable) — tokens signés à TTL, renouvelables, espace personnel permanent via le même mécanisme, échangeables contre un JWT à scope limité côté API ; `studizz-auth` (JWT central, skill `studizz-auth-integration`) pour les admins Studio et les comptes techniques.
 - Hébergement UE. Secrets uniquement par variables d'environnement.
 
 ## 2. Les briques (responsabilité · données · API · événements)
