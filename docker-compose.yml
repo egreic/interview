@@ -1,0 +1,52 @@
+# Dev-only stack. Production runs on OVH VPS (Apache + git deploy + systemd);
+# this file is never deployed. It exists so the whole system boots locally.
+#
+# Services for frontend/interviewee (J3), frontend/studio (J6), workers (J2)
+# and voice-gateway (J4) are added at their milestone — a compose file that
+# references Dockerfiles that don't exist yet would break `make up`.
+services:
+  mongodb:
+    image: mongo:7
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE:-interview}
+    ports:
+      - "${MONGO_PORT:-27017}:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    restart: unless-stopped
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER:-guest}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS:-guest}
+    ports:
+      - "${RABBITMQ_PORT:-5672}:5672"          # AMQP
+      - "${RABBITMQ_MGMT_PORT:-15672}:15672"   # management UI
+
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    depends_on:
+      - mongodb
+      - rabbitmq
+      - redis
+    environment:
+      APP_ENV: dev
+      MONGODB_URL: "mongodb://mongodb:27017"
+      MONGODB_DB: "interview"
+      STUDIZZ_AUTH_URL: "https://rancher.studizz.fr/studizz-auth/"
+    ports:
+      - "${BACKEND_PORT:-8080}:80"
+    volumes:
+      - ./backend:/var/www/html
+
+volumes:
+  mongo_data:

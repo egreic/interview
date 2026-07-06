@@ -1,0 +1,24 @@
+# Node
+node_modules/
+frontend/*/dist/
+frontend/*/.env
+
+# PHP / Symfony
+backend/vendor/
+backend/.env.local
+backend/.env.*.local
+backend/var/
+
+# Python
+workers/.venv/
+voice-gateway/.venv/
+workers/.env
+voice-gateway/.env
+__pycache__/
+*.pyc
+
+# Env / misc
+.env
+deploy/deploy.env
+*.tar.gz
+.DS_Store
