@@ -62,6 +62,8 @@ Se lit avec `03-cahier-des-charges-technique.md` (le QUOI). Ce skill est le COMM
 - **API à état vs sans état** : l'adaptateur cible du banc gère les deux (`conversation_id` vs historique complet) — vérifier lequel avant de brancher.
 - **Overfit few-shot** : si les réponses de test sont identiques aux exemples mot à mot, le test ne prouve rien — changer les questions.
 - **Enthousiasme sur réponse vide** : « Top ! » après un « oui » — bannir, c'est un tell d'IA.
+- **Listeners ODM (bundle 5.x)** : le tag `doctrine_mongodb.odm.event_subscriber` est ignoré silencieusement — utiliser l'attribut `#[AsDocumentListener]`. Symptôme vécu au J1 : garde tenant jamais exécutée, tenantId nul en base. Et `prePersist` se déclenche dans `persist()`, pas à `flush()`.
+- **Filtres ODM et agrégations** : le filtre tenant s'applique aux requêtes repository/query builder, PAS aux pipelines d'agrégation — toute agrégation sur une collection tenant-owned doit ajouter le `$match: {tenantId}` explicitement (et son test d'isolation).
 
 ## Design system
 
