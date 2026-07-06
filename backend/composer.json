@@ -1,0 +1,62 @@
+{
+    "name": "studizz/interview-backend",
+    "description": "Interview & Avatars brick — Symfony modular monolith backend",
+    "type": "project",
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.3",
+        "ext-ctype": "*",
+        "ext-iconv": "*",
+        "doctrine/mongodb-odm-bundle": "^5.0",
+        "nelmio/api-doc-bundle": "^4.28",
+        "symfony/console": "6.4.*",
+        "symfony/dotenv": "6.4.*",
+        "symfony/framework-bundle": "6.4.*",
+        "symfony/http-client": "6.4.*",
+        "symfony/property-access": "6.4.*",
+        "symfony/property-info": "6.4.*",
+        "symfony/runtime": "6.4.*",
+        "symfony/security-bundle": "6.4.*",
+        "symfony/serializer": "6.4.*",
+        "symfony/validator": "6.4.*",
+        "symfony/yaml": "6.4.*"
+    },
+    "require-dev": {
+        "php-parallel-lint/php-parallel-lint": "^1.4",
+        "phpunit/phpunit": "^10.5"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/runtime": true
+        },
+        "platform": {
+            "php": "8.3.30"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "lint": [
+            "parallel-lint src tests",
+            "@php bin/console lint:yaml config --parse-tags",
+            "@php bin/console lint:container"
+        ],
+        "test": "phpunit",
+        "openapi:dump": "@php bin/console nelmio:apidoc:dump --format=json --no-pretty > openapi.json"
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "6.4.*"
+        }
+    }
+}
