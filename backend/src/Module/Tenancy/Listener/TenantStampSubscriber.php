@@ -8,7 +8,7 @@ use App\Module\Tenancy\Exception\MissingTenantContextException;
 use App\Module\Tenancy\Exception\TenantMismatchException;
 use App\Module\Tenancy\TenantContext;
 use App\Module\Tenancy\TenantOwnedInterface;
-use Doctrine\Common\EventSubscriber;
+use Doctrine\Bundle\MongoDBBundle\Attribute\AsDocumentListener;
 use Doctrine\ODM\MongoDB\Event\LifecycleEventArgs;
 use Doctrine\ODM\MongoDB\Events;
 
@@ -16,15 +16,11 @@ use Doctrine\ODM\MongoDB\Events;
  * Write-side of the tenant guard: stamps the current tenant on new documents
  * and refuses writes that have no tenant or contradict the context.
  */
-final class TenantStampSubscriber implements EventSubscriber
+#[AsDocumentListener(event: Events::prePersist)]
+final class TenantStampSubscriber
 {
     public function __construct(private readonly TenantContext $context)
     {
-    }
-
-    public function getSubscribedEvents(): array
-    {
-        return [Events::prePersist];
     }
 
     public function prePersist(LifecycleEventArgs $args): void

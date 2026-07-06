@@ -17,10 +17,6 @@ services:
             - '../src/Module/*/Dto/'
             - '../src/Module/*/Exception/'
 
-    App\Module\Tenancy\Listener\TenantStampSubscriber:
-        tags:
-            - { name: 'doctrine_mongodb.odm.event_subscriber' }
-
     App\Module\Platform\Seed\DemoSeeder:
         arguments:
             $seeders: !tagged_iterator app.module_seeder
