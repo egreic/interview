@@ -33,6 +33,7 @@ Se lit avec `03-cahier-des-charges-technique.md` (le QUOI). Ce skill est le COMM
 
 ## Conventions
 
+- **Préséance** : le scaffold Studizz (`studizz-project-scaffold`, disponible dans `.claude/skills/` avec `studizz-auth-integration`, `studizz-api-amqp-client`, `studizz-api-mailer-client`, `openapi-controller-doc`) fait autorité sur l'outillage et les conventions d'infrastructure maison ; le cahier des charges et ce skill font autorité sur l'architecture du domaine (briques, contrats, multi-tenant, immutabilité) ; tout conflit est remonté à l'humain, jamais arbitré silencieusement.
 - **Langue** : code, identifiants et commits en anglais ; le vocabulaire métier français est mappé une fois (`docs/ubiquitous-language.md`) : Trame→InterviewTemplate, Enregistrement canonique→CanonicalRecord, Profil vivant→LivingProfile, Atelier→AvatarWorkshop, Banc d'essai→TestBench, Fiche persona→PersonaSheet.
 - **Symfony** : `src/Module/<Brick>/{Controller,Service,Document,Event,Adapter}` ; DTO d'entrée validés ; pas de logique en contrôleur ; contrôleurs REST maison, OpenAPI mis à jour dans la même PR (la CI compare).
 - **Python (passerelle)** : FastAPI, typé, sans état, aucune dépendance à Mongo — elle ne parle qu'à l'API Symfony.
